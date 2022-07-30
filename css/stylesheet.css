@@ -83,6 +83,7 @@ font-family: Oswald, sans-serif;
 
 @media screen and (max-width: 740px) {
 
+    /*Reference from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp*/
     .menu-icon {
         margin-top: -20px;
         text-align: left;
@@ -99,6 +100,7 @@ font-family: Oswald, sans-serif;
 
     .nav-bar-links.responsive {
         margin-top: 30px;
+        /*left: 740px;*/
         padding-bottom: 30px;
         background-color: #000000;
     }
@@ -124,5 +126,6 @@ font-family: Oswald, sans-serif;
         float: right;
         display: block;
     }
+
 }
 
