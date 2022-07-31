@@ -81,6 +81,22 @@ font-family: Oswald, sans-serif;
     display:none;
 }
 
+/*Added some padding so the page content doesn't scroll down if open in small window*/
+.nav-bar-section + section {
+    padding-top: 120px;
+}
+
+.sticky-nav-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/*Selects the first section that comes after the .sticky-nav-bar class*/
+.sticky-nav-bar + section {
+    padding-top: 100px;
+}
+
 /*FOOTER STYLiNG*/
 
 .footer {
@@ -104,19 +120,19 @@ font-family: Oswald, sans-serif;
 .footer-section {
     position: relative;
     padding: 80px 30px 40px;
-    border-bottom: 1px solid #e4ebf3;
+    /*border-bottom: 1px solid #e4ebf3;*/
     font-family: Oswald, sans-serif;
     text-transform: uppercase;
     justify-content: space-between;
 }
 
 .footer-block {
-    justify-content: space-around;
+    /*justify-content: space-around;*/
     padding-left: 50px;
     display: flex;
     position: relative;
     flex-direction: column;
-    justify-content: flex-start;
+    /*justify-content: flex-start;*/
     align-items: flex-start;
 }
 
@@ -211,10 +227,10 @@ font-family: Oswald, sans-serif;
 @media screen and (max-width: 740px) {
 
     .nav-bar-section {
-        position: fixed;
         background-color: #000000;
         width: 100%;
     }
+
     /*Reference from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp*/
     .menu-icon {
         margin-top: -20px;
@@ -257,11 +273,6 @@ font-family: Oswald, sans-serif;
     .nav-bar-links a.menu-icon {
         float: right;
         display: block;
-    }
-
-    .footer-logo {
-        width: 100px;
-
     }
 
 }
