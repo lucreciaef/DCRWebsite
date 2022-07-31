@@ -219,8 +219,14 @@ font-family: Oswald, sans-serif;
 }
 
 /*Selects the first section that comes after the .sticky-nav-bar class*/
-.sticky-nav-bar + section {
+/*Higher padding for home hero*/
+.sticky-nav-bar + section.home {
     padding-top: 350px;
+}
+
+/*General smaller hero for other pages*/
+.sticky-nav-bar + section.hero {
+    padding-top: 250px;
 }
 
 /*--------------------------------------------------------------------------------*/
@@ -261,6 +267,26 @@ font-family: Oswald, sans-serif;
     letter-spacing: 2px;
     text-transform: uppercase;
     text-shadow: 1px 1px 6px #fff;
+}
+
+.hero-section {
+    padding-top: 140px;
+    padding-bottom: 140px;
+    background-position: 0 0, 0 40%;
+    background-size: auto, cover;
+    background-attachment: scroll, scroll;
+}
+
+.hero-section.about {
+    background-image: linear-gradient(180deg, #8ac2b6, rgba(46, 157, 255, 0.22)), url('../images/slider_01.jpg');
+}
+
+.hero-section.members {
+    background-image: linear-gradient(180deg, #8ac2b6, rgba(46, 157, 255, 0.22)), url('../images/slider_02.jpg');
+}
+
+.hero-section.events {
+    background-image: linear-gradient(180deg, #8ac2b6, rgba(46, 157, 255, 0.22)), url('../images/slider_04.jpg');
 }
 
 /*--------------------------------------------------------------------------------*/
