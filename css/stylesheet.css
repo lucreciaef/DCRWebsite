@@ -1,3 +1,7 @@
+/*--------------------------------------------------------------------------------*/
+/*------GLOBAL SITE STYLING------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------*/
+
 body {
     background-color: #E4EBF3FF;
     font-family: 'Open Sans', sans-serif;
@@ -7,12 +11,134 @@ body {
     margin: 0;
 }
 
-/*#spacer {*/
-/*    margin-top: 100px;*/
-/*    position: absolute;*/
+h1 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 38px;
+    line-height: 44px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #676770;
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #676770;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 300;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+}
+
+h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+h5 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #676770;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 300;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+h6 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 700;
+}
+
+p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 300;
+}
+
+a {
+    text-decoration: underline;
+}
+
+.button {
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 12px 30px;
+    border-radius: 4px;
+    background-color: #192024;
+    transition: background-color 300ms ease;
+    color: #fff;
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    background-color: #8ac2b6;
+}
+
+.hollow-button {
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 10px 30px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    -webkit-transition: background-color 300ms ease, border 300ms ease, color 300ms ease;
+    transition: background-color 300ms ease, border 300ms ease, color 300ms ease;
+    color: #fff;
+    line-height: 21px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.hollow-button:hover {
+    border-color: #a2c5bb;
+    color: #a2c5bb;
+}
+
+.hollow-button.all-caps {
+    text-transform: uppercase;
+}
+
+/*.hollow-button.all-caps:hover {*/
+/*    border-color: #8ac2b6;*/
+/*    color: #fff;*/
 /*}*/
 
-/*HEADER STYLING*/
+/*--------------------------------------------------------------------------------*/
+/*------HEADER STYLING------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------*/
+
 .nav-header {
     background-color: #000;
     font-family: Oswald, sans-serif;
@@ -93,11 +219,79 @@ font-family: Oswald, sans-serif;
 }
 
 /*Selects the first section that comes after the .sticky-nav-bar class*/
-.sticky-nav-bar + section {
-    padding-top: 100px;
+/*Higher padding for home hero*/
+.sticky-nav-bar + section.home {
+    padding-top: 350px;
 }
 
-/*FOOTER STYLiNG*/
+/*General smaller hero for other pages*/
+.sticky-nav-bar + section.hero {
+    padding-top: 250px;
+}
+
+/*--------------------------------------------------------------------------------*/
+/*------HERO BANNERS STYLING------------------------------------------------------*/
+/*--------------------------------------------------------------------------------*/
+
+.home-hero-section{
+    padding-top: 250px;
+    padding-bottom: 250px;
+    background-image: linear-gradient(180deg, #8ac2b6, rgba(46, 157, 255, 0.22)), url('../images/dcr_Footer.jpg');
+    background-position: 0 0, 50% 30%;
+    background-size: auto, cover;
+    background-attachment: scroll, scroll;
+    color: #8ac2b6;
+    text-align: center;
+}
+
+.hero-heading {
+    margin-bottom: 30px;
+    font-family: Oswald, sans-serif;
+    color: #f8f8f8;
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 6px #000;
+}
+
+.hero-subheading {
+    margin-bottom: 30px;
+    color: #000;
+    font-size: 25px;
+    line-height: 25px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 6px #fff;
+}
+
+.hero-section {
+    padding-top: 140px;
+    padding-bottom: 140px;
+    background-position: 0 0, 0 40%;
+    background-size: auto, cover;
+    background-attachment: scroll, scroll;
+}
+
+.hero-section.about {
+    background-image: linear-gradient(180deg, #8ac2b6, rgba(46, 157, 255, 0.22)), url('../images/slider_01.jpg');
+}
+
+.hero-section.members {
+    background-image: linear-gradient(180deg, #8ac2b6, rgba(46, 157, 255, 0.22)), url('../images/slider_02.jpg');
+}
+
+.hero-section.events {
+    background-image: linear-gradient(180deg, #8ac2b6, rgba(46, 157, 255, 0.22)), url('../images/slider_04.jpg');
+}
+
+/*--------------------------------------------------------------------------------*/
+/*------FOOTER SECTION STYLING----------------------------------------------------*/
+/*--------------------------------------------------------------------------------*/
 
 .footer {
     background-color: #404047;
@@ -106,6 +300,7 @@ font-family: Oswald, sans-serif;
 .footer-logo {
     width: 180px;
 }
+
 .footer-upper-block {
     display: flex;
     justify-content: space-evenly;
@@ -194,6 +389,7 @@ font-family: Oswald, sans-serif;
     display: flex;
     justify-content: space-between;
 }
+
 .footer-bottom-left {
     display: flex;
 }
@@ -214,7 +410,9 @@ font-family: Oswald, sans-serif;
     filter: invert(100%);
 }
 
-
+/*--------------------------------------------------------------------------------*/
+/*------MEDIA QUERIES FOR RESPONSIVENESS*/
+/*--------------------------------------------------------------------------------*/
 
 @media screen and (min-width: 1280px) and (max-width: 1600px) and (min-resolution: 192dpi) {
 
@@ -226,6 +424,7 @@ font-family: Oswald, sans-serif;
 
 @media screen and (max-width: 740px) {
 
+    /*------NAVIGATION BAR STYLING------------------------------------------------*/
     .nav-bar-section {
         background-color: #000000;
         width: 100%;
@@ -274,6 +473,10 @@ font-family: Oswald, sans-serif;
         float: right;
         display: block;
     }
+
+    /*------CONTENT STYLING-------------------------------------------------------*/
+
+    /*------FOOTER STYLING--------------------------------------------------------*/
 
 }
 
