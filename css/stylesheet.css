@@ -2,9 +2,34 @@
 /*------GLOBAL SITE STYLING-------------------------------------------------------*/
 /*--------------------------------------------------------------------------------*/
 
+/*Declaring global CSS variables to set up all colors in the website*/
+/*Ref: https://developer.mozilla.org/en-US/docs/Web/CSS/:root*/
+
+:root {
+    --background-medium: #E4EBF3FF;
+    --white-almost: #f8f8f8;
+    --teal-very-light-color: #b4d9d2;
+    --teal-light-color: #8ac2b6;
+    --teal-team-strong: #20ac99;
+    --teal-team-color: #8ac2b6;
+    --teal-green-darker: #609a8e;
+    --bluish-teal-gradient: rgba(46, 157, 255, 0.22);
+    --teal-green-super-dark: #192424;
+    --bluish-teal-color: #6a859c;
+    --dark-gray-selected: #32343a;
+    --dark-gray-fonts: #676770;
+    --dark-gray-footer: #404047;
+    --nav-font-color-inactive: #676770;
+    --nav-font-color-current: #bec3c7;
+    --nav-font-color-hover: #8ac2b6;
+    --font-header: Oswald, sans-serif;
+    --font-body-content: Roboto, sans-serif;
+    --font-subheaders: 'Open Sans', sans-serif;;
+}
+
 body {
-    background-color: #E4EBF3FF;
-    font-family: 'Open Sans', sans-serif;
+    background-color: var(--background-medium);
+    font-family: var(--font-subheaders);
     color: #6a859c;
     font-size: 16px;
     line-height: 20px;
@@ -23,7 +48,7 @@ h1 {
 h2 {
     margin-top: 0;
     margin-bottom: 10px;
-    color: #676770;
+    color: var(--dark-gray-fonts);
     font-size: 32px;
     line-height: 36px;
     font-weight: 300;
@@ -32,13 +57,14 @@ h2 {
 }
 
 h3 {
+    font-family: var(--font-header);
     margin-top: 0;
     margin-bottom: 0;
-    color: #676770;
+    color: var(--dark-gray-fonts);
     font-size: 20px;
     line-height: 30px;
     font-weight: 300;
-    letter-spacing: 7px;
+    letter-spacing: 3px;
     text-transform: uppercase;
 }
 
@@ -54,7 +80,7 @@ h4 {
 h5 {
     margin-top: 0;
     margin-bottom: 20px;
-    color: #676770;
+    color: var(--dark-gray-fonts);
     font-size: 18px;
     line-height: 20px;
     font-weight: 300;
@@ -88,9 +114,9 @@ a {
     margin-left: 10px;
     padding: 12px 30px;
     border-radius: 4px;
-    background-color: #192024;
+    background-color: var(--teal-green-super-dark);
     transition: background-color 300ms ease;
-    color: #fff;
+    color: white;
     font-size: 16px;
     line-height: 21px;
     font-weight: 300;
@@ -101,7 +127,7 @@ a {
 }
 
 .button:hover {
-    background-color: #8ac2b6;
+    background-color: var(--teal-light-color);
 }
 
 .hollow-button {
@@ -109,10 +135,10 @@ a {
     margin-right: 10px;
     margin-left: 10px;
     padding: 10px 30px;
-    border: 1px solid #fff;
+    border: 1px solid white;
     border-radius: 4px;
     transition: background-color 300ms ease, border 300ms ease, color 300ms ease;
-    color: #fff;
+    color: white;
     line-height: 21px;
     font-weight: 300;
     letter-spacing: 2px;
@@ -121,8 +147,8 @@ a {
 }
 
 .hollow-button:hover {
-    border-color: #a2c5bb;
-    color: #a2c5bb;
+    border-color: var(--teal-green-super-dark);
+    color: var(--teal-green-super-dark);
 }
 
 /*--------------------------------------------------------------------------------*/
@@ -130,9 +156,9 @@ a {
 /*--------------------------------------------------------------------------------*/
 
 .nav-header {
-    background-color: #000;
-    font-family: Oswald, sans-serif;
-    color: #405c54;
+    background-color: black;
+    font-family: var(--font-header);
+    /*color: #405c54;*/
     width: 100%;
 }
 
@@ -171,26 +197,26 @@ a {
     margin-right: auto;
     margin-left: auto;
     transition: all 300ms ease-in-out;
-    font-family: Oswald, sans-serif;
-    color: #676770;
+    font-family: var(--font-header);
+    color: var(--nav-font-color-inactive);
     font-size: 20px;
     text-decoration: none;
 }
 
 .navigation-link:hover {
-    color: #b4ddd4;
+    color: var(--nav-font-color-hover);
 }
 
 .navigation-link.--current {
     /*margin-top: 10px;*/
-    font-family: Oswald, sans-serif;
-    color: #bec3c7;
+    font-family: var(--font-header);
+    color: var(--nav-font-color-current);
     font-size: 20px;
     text-align: left;
 }
 
 .navigation-link.--current:hover {
-    color: #8ac2b6;
+    color: var(--nav-font-color-hover);
 }
 
 .nav-bar-links a.menu-icon {
@@ -226,37 +252,37 @@ a {
 .home-hero-section{
     padding-top: 250px;
     padding-bottom: 250px;
-    background-image: linear-gradient(180deg, #8ac2b6, rgba(46, 157, 255, 0.22)), url('../images/dcr_Footer.jpg');
+    background-image: linear-gradient(180deg, var(--teal-light-color), var(--bluish-teal-gradient)), url('../images/dcr_Footer.jpg');
     background-position: 0 0, 50% 30%;
     background-size: auto, cover;
     background-attachment: scroll, scroll;
-    color: #8ac2b6;
+    color: var(--teal-light-color);
     text-align: center;
 }
 
 .hero-heading {
     margin-bottom: 30px;
     font-family: Oswald, sans-serif;
-    color: #f8f8f8;
+    color: var(--white-almost);
     font-size: 60px;
     line-height: 60px;
     font-weight: 400;
     text-align: center;
     letter-spacing: 4px;
     text-transform: uppercase;
-    text-shadow: 1px 1px 6px #000;
+    text-shadow: 1px 1px 6px black;
 }
 
 .hero-subheading {
     margin-bottom: 30px;
-    color: #000;
+    color: black;
     font-size: 25px;
     line-height: 25px;
     font-weight: 400;
     text-align: center;
     letter-spacing: 2px;
     text-transform: uppercase;
-    text-shadow: 1px 1px 6px #fff;
+    text-shadow: 1px 1px 6px white;
 }
 
 .hero-section {
@@ -268,17 +294,16 @@ a {
 }
 
 .hero-section.about {
-    background-image: linear-gradient(180deg, #8ac2b6, rgba(46, 157, 255, 0.22)), url('../images/slider_01.jpg');
+    background-image: linear-gradient(180deg, var(--teal-team-color), var(--bluish-teal-gradient)), url('../images/slider_01.jpg');
 }
 
 .hero-section.members {
-    background-image: linear-gradient(180deg, #8ac2b6, rgba(46, 157, 255, 0.22)), url('../images/slider_02.jpg');
+    background-image: linear-gradient(180deg, var(--teal-team-color), var(--bluish-teal-gradient)), url('../images/slider_02.jpg');
 }
 
 .hero-section.events {
-    background-image: linear-gradient(180deg, #8ac2b6, rgba(46, 157, 255, 0.22)), url('../images/slider_04.jpg');
+    background-image: linear-gradient(180deg, var(--teal-team-color), var(--bluish-teal-gradient)), url('../images/slider_04.jpg');
 }
-
 
 /*--------------------------------------------------------------------------------*/
 /*------ABOUT PAGE: CONTENT STYLING-----------------------------------------------*/
@@ -299,8 +324,8 @@ a {
 }
 
 .content-heading {
-    font-family: Oswald, sans-serif;
-    color: #8ac2b6;
+    font-family: var(--font-header);
+    color: var(--teal-team-color);
     font-size: 45px;
     font-weight: 400;
     text-align: center;
@@ -309,15 +334,15 @@ a {
 
 .content-text {
     margin-bottom: 24px;
-    font-family: Roboto, sans-serif;
-    color: #404047;
+    font-family: var(--font-body-content);
+    color: var(--dark-gray-fonts);
     font-size: 14px;
     font-weight: 300;
     text-decoration: none;
 }
 
 .content-links {
-    color: #20ac99;
+    color: var(--teal-team-strong);
 }
 
 .content-text.intro {
@@ -326,8 +351,8 @@ a {
 
 .button-content {
     padding: 12px 25px;
-    background-color: #8ac2b6;
-    font-family: Roboto, sans-serif;
+    background-color: var(--teal-team-color);
+    font-family: var(--font-subheaders);
     line-height: 20px;
     font-weight: 300;
     letter-spacing: 2px;
@@ -337,15 +362,15 @@ a {
     margin-left: 10px;
     border-radius: 4px;
     transition: background-color 300ms ease;
-    color: #fff;
+    color: white;
     font-size: 16px;
     text-align: center;
     text-decoration: none;
 }
 
 .button-content:hover {
-    background-color: #32343a;
-    color: #fff;
+    background-color: var(--dark-gray-footer);
+    color: white;
 }
 
 .about-image-1 {
@@ -357,8 +382,8 @@ a {
 
 .about-content-section-2 {
     padding: 80px 30px;
-    background-color: #f5f7fa;
-    font-family: Roboto, sans-serif;
+    background-color: var(--white-almost);
+    font-family: var(--font-body-content);
 }
 
 .section-wrapper {
@@ -375,6 +400,70 @@ a {
     align-items: flex-start;
 }
 
+/*FAQ SECTION*/
+
+.faq-heading {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.faq-secondary {
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.question-banner {
+    width: 100%;
+    background-color: var(--teal-very-light-color);
+    color: var(--dark-gray-fonts);
+    border: 1px solid white;
+    font-family: var(--font-subheaders);
+    font-size: 16px;
+    cursor: pointer;
+    padding: 40px;
+    text-align: left;
+    line-height: 1.5;
+    transition: 320ms;
+}
+
+/*CSS style of the answer section when it is open - hidden by default*/
+.question-answer-section {
+    display: none;
+    padding: 40px;
+    margin: 0;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 300ms ease-out;
+}
+
+.question-answer-section p {
+    font-family: var(--font-body-content);
+    font-size: 1em;
+    color: var(--dark-gray-fonts);
+    font-weight: 300;
+}
+
+.question-banner:hover {
+    background-color: #8ac2b6;
+}
+
+/*Adds a + symbol to the right of the banner*/
+.question-banner:after {
+    content: "\002B";
+    float: right;
+}
+
+.active-question-banner {
+    background-color: var(--teal-team-strong);
+    color: white;
+}
+
+/*Adds a - symbol when the question banner is open*/
+.active-question-banner:after {
+    content: "\2212";
+}
+
 /*TESTIMONIALS SECTION*/
 
 .testimonials-aside {
@@ -387,15 +476,12 @@ a {
 }
 
 .testimonials-grid {
-    /*display: -ms-grid;*/
     display: grid;
     margin-top: 50px;
     grid-auto-columns: 1fr;
     grid-column-gap: 40px;
     grid-row-gap: 40px;
-    /*-ms-grid-columns: 1fr 1fr 1fr;*/
     grid-template-columns: 1fr 1fr 1fr;
-    /*-ms-grid-rows: auto;*/
     grid-template-rows: auto;
 }
 
@@ -407,21 +493,21 @@ a {
     border-style: solid;
     border-radius: 5px;
     border-width: 1px;
-    border-color: #ffffff;
-    box-shadow: 0 0 20px 2px #77a292;
+    border-color: white;
+    box-shadow: 0 0 20px 2px var(--teal-green-darker);
 }
 
 .testimonial-text {
     margin-bottom: 40px;
     font-size: 16px;
-    color: #1a1b1f;
+    color: var(--dark-gray-fonts);
 }
 
 .testimonial-info-box {
     display: flex;
     padding: 24px 16px;
     align-items: center;
-    background-color: #f5f7fa;
+    background-color: var(--white-almost);
 }
 
 .testimonial-image {
@@ -434,13 +520,13 @@ a {
 
 .testimonial-player-name {
     margin-bottom: 2px;
-    font-family: Oswald, sans-serif;
+    font-family: var(--font-header);
     font-weight: 400;
     letter-spacing: 3px;
 }
 
 .player-role {
-    font-family: Oswald, sans-serif;
+    font-family: var(--font-header);
 }
 
 /*--------------------------------------------------------------------------------*/
@@ -448,7 +534,7 @@ a {
 /*--------------------------------------------------------------------------------*/
 
 .footer {
-    background-color: #404047;
+    background-color: var(--dark-gray-footer);
 }
 
 .footer-logo {
@@ -469,8 +555,7 @@ a {
 .footer-section {
     position: relative;
     padding: 80px 30px 40px;
-    /*border-bottom: 1px solid #e4ebf3;*/
-    font-family: Oswald, sans-serif;
+    font-family: var(--font-header);
     text-transform: uppercase;
     justify-content: space-between;
 }
@@ -486,7 +571,7 @@ a {
 }
 
 .footer-title {
-    color: #8ac2b6;
+    color: var(--teal-team-color);
     font-size: 18px;
     line-height: 32px;
     font-weight: 500;
@@ -497,13 +582,13 @@ a {
     display: block;
     margin-top: 20px;
     flex: 0 auto;
-    color: #fff;
+    color: white;
     text-decoration: none;
 }
 
 .footer-copyright {
     margin-top: 5px;
-    color: #fff;
+    color: white;
     text-decoration: none;
 }
 
@@ -513,16 +598,16 @@ a {
     margin-top: 5px;
     margin-right: 10px;
     flex: 0 auto;
-    color: #fff;
+    color: white;
     text-decoration: none;
 }
 
 .footer-link:hover {
-    color: #a2c5bb;
+    color: var(--teal-light-color);
 }
 
 .footer-link-two:hover {
-    color: #a2c5bb;
+    color: var(--teal-light-color);
 }
 
 .footer-divider {
@@ -532,7 +617,7 @@ a {
     height: 1px;
     margin-top: 40px;
     margin-bottom: 40px;
-    background-color: #e4ebf3;
+    background-color: var(--white-almost);
     box-sizing: border-box;
 }
 
