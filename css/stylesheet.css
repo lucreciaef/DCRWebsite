@@ -306,6 +306,28 @@ a {
 }
 
 /*--------------------------------------------------------------------------------*/
+/*------HOME PAGE: CONTENT STYLING------------------------------------------------*/
+/*--------------------------------------------------------------------------------*/
+
+
+.sponsors-section {
+    position: relative;
+    padding: 50px 30px;
+    border-bottom: 1px solid #e4ebf3;
+}
+
+.sponsors-row {
+    display: flex;
+    max-width: 750px;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/*--------------------------------------------------------------------------------*/
 /*------ABOUT PAGE: CONTENT STYLING-----------------------------------------------*/
 /*--------------------------------------------------------------------------------*/
 
@@ -670,6 +692,14 @@ a {
 
 @media screen and  (min-width: 850px) and (max-width: 800px) {
 
+    /*------CONTENT STYLING-------------------------------------------------------*/
+
+    .sponsors-image {
+        margin-right: 20px;
+        margin-bottom: 30px;
+        margin-left: 20px;
+    }
+
 }
 
 @media screen and (max-width: 850px) {
@@ -750,6 +780,13 @@ a {
         margin-left: 20px;
         margin-right: 20px;
     }
+
+    .sponsors-image {
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 20px;
+    }
+
     /*About content*/
     .section-wrapper {
         display: block;
@@ -824,6 +861,7 @@ a {
     .player-role {
         font-family: var(--font-header);
     }
+
 
     /*------FOOTER STYLING--------------------------------------------------------*/
 
