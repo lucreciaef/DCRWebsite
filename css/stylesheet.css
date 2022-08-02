@@ -288,7 +288,7 @@ a {
 .hero-section {
     padding-top: 140px;
     padding-bottom: 140px;
-    background-position: 0 0, 0 40%;
+    background-position: 0 0, 40%;
     background-size: auto, cover;
     background-attachment: scroll, scroll;
 }
@@ -488,19 +488,25 @@ a {
 /*    grid-template-rows: auto;*/
 /*}*/
 
+.testimonials-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    justify-content: center;
+}
+
 /*Ref https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator*/
 .testimonial-card {
     display: block;
-    /*display: block;*/
-    max-width: 40%;
-    margin: 30px;
-    padding: 32px 16px 16px;
-    /*flex-direction: column;*/
+    max-width: 26%;
+    min-width: 22%;
+    margin: 15px;
+    padding: 25px 16px 16px;
     border-style: solid;
     border-radius: 5px;
     border-width: 1px;
     border-color: white;
-    box-shadow: 0 0 20px 2px var(--teal-green-darker);
+    box-shadow: 0 0 15px 2px var(--teal-green-darker);
     transition: 0.5s;
 }
 
@@ -662,11 +668,11 @@ a {
 
 }
 
-@media screen and  (min-width: 700px) and (max-width: 800px) {
+@media screen and  (min-width: 850px) and (max-width: 800px) {
 
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 850px) {
 
     /*------NAVIGATION BAR STYLING------------------------------------------------*/
     .nav-bar-section {
