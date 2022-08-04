@@ -311,7 +311,7 @@ a {
 
 
 .sponsors-section {
-    position: relative;
+    position: inherit;
     padding: 50px 30px;
     border-bottom: 1px solid #e4ebf3;
 }
@@ -573,8 +573,11 @@ a {
     background-color: var(--dark-gray-footer);
 }
 
-.footer-logo {
-    width: 180px;
+.logo-wrapper {
+    max-width: 180px;
+    max-height: 180px;
+    padding-bottom: 30px;
+    padding-left: 30px;
 }
 
 .footer-upper-block {
@@ -867,3 +870,12 @@ a {
 
 }
 
+@media screen and (max-width: 600px) {
+
+    .footer-upper-block {
+        display: inline-block;
+    }
+
+
+
+}
