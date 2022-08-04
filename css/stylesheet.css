@@ -156,6 +156,7 @@ a {
 /*--------------------------------------------------------------------------------*/
 
 .nav-header {
+    z-index: 10;
     background-color: black;
     font-family: var(--font-header);
     /*color: #405c54;*/
@@ -229,6 +230,7 @@ a {
 }
 
 .sticky-nav-bar {
+    z-index: 10;
     position: fixed;
     top: 0;
     width: 100%;
@@ -252,7 +254,7 @@ a {
 .home-hero-section{
     padding-top: 250px;
     padding-bottom: 250px;
-    background-image: linear-gradient(180deg, var(--teal-light-color), var(--bluish-teal-gradient)), url('../images/dcr_Footer.jpg');
+    background-image: linear-gradient(180deg, var(--teal-light-color), var(--bluish-teal-gradient)), url('../assets/images/dcr_Footer.jpg');
     background-position: 0 0, 50% 30%;
     background-size: auto, cover;
     background-attachment: scroll, scroll;
@@ -294,21 +296,54 @@ a {
 }
 
 .hero-section.about {
-    background-image: linear-gradient(180deg, var(--teal-team-color), var(--bluish-teal-gradient)), url('../images/slider_01.jpg');
+    background-image: linear-gradient(180deg, var(--teal-team-color), var(--bluish-teal-gradient)), url('../assets/images/slider_01.jpg');
 }
 
 .hero-section.members {
-    background-image: linear-gradient(180deg, var(--teal-team-color), var(--bluish-teal-gradient)), url('../images/slider_02.jpg');
+    background-image: linear-gradient(180deg, var(--teal-team-color), var(--bluish-teal-gradient)), url('../assets/images/slider_02.jpg');
 }
 
 .hero-section.events {
-    background-image: linear-gradient(180deg, var(--teal-team-color), var(--bluish-teal-gradient)), url('../images/slider_04.jpg');
+    background-image: linear-gradient(180deg, var(--teal-team-color), var(--bluish-teal-gradient)), url('../assets/images/slider_04.jpg');
 }
 
 /*--------------------------------------------------------------------------------*/
 /*------HOME PAGE: CONTENT STYLING------------------------------------------------*/
 /*--------------------------------------------------------------------------------*/
 
+/*Background video*/
+
+.hero-video-section {
+    /*height: 100%;*/
+    /*width: 100%;*/
+    z-index: -1;
+    opacity: 0.45;
+    overflow: hidden;
+    /*grid-row-start: 2;*/
+    /*grid-row-end: 3;*/
+    /*grid-column-start: 1;*/
+    /*grid-column-end: 4;*/
+    /*border-radius: 0.3rem;*/
+}
+
+.hero-video-wrapper {
+    height: 100%;
+    width: 100%;
+    /*-o-object-fit: cover;*/
+    object-fit: cover;
+    /*display: grid;*/
+    /*height: 95rem;*/
+    grid-template-rows: 0 1fr 5rem;
+    grid-template-columns: 15rem 1fr 15rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-title-box.text-on-video {
+    z-index: 1;
+    display: grid;
+    justify-content: center;
+}
 
 .sponsors-section {
     position: inherit;
