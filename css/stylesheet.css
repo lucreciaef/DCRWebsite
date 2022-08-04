@@ -106,6 +106,7 @@ p {
 
 a {
     text-decoration-line: none;
+    z-index: 2;
 }
 
 .button {
@@ -314,35 +315,32 @@ a {
 /*Background video*/
 
 .hero-video-section {
-    /*height: 100%;*/
-    /*width: 100%;*/
     z-index: -1;
-    opacity: 0.45;
+    opacity: 0.5;
     overflow: hidden;
-    /*grid-row-start: 2;*/
-    /*grid-row-end: 3;*/
-    /*grid-column-start: 1;*/
-    /*grid-column-end: 4;*/
-    /*border-radius: 0.3rem;*/
 }
 
 .hero-video-wrapper {
     height: 100%;
     width: 100%;
-    /*-o-object-fit: cover;*/
     object-fit: cover;
-    /*display: grid;*/
-    /*height: 95rem;*/
-    grid-template-rows: 0 1fr 5rem;
-    grid-template-columns: 15rem 1fr 15rem;
     align-items: center;
     justify-content: center;
 }
 
-.hero-title-box.text-on-video {
-    z-index: 1;
+.text-on-video {
+    z-index: 3;
+    opacity: 1;
+    margin-top: -350px;
+    margin-bottom: 200px;
     display: grid;
     justify-content: center;
+    letter-spacing: 1px;
+}
+
+.video-title {
+    font-size: 40px;
+    text-shadow: #1a1b1f;
 }
 
 .sponsors-section {
@@ -819,6 +817,35 @@ a {
         margin-right: 20px;
     }
 
+    .background-video {
+        width: 850px;
+        object-fit: scale-down;
+    }
+
+    .text-on-video {
+        z-index: 1;
+        opacity: 1;
+        margin-top: -250px;
+        margin-bottom: 100px;
+        display: grid;
+        justify-content: center;
+        letter-spacing: 1px;
+        /*transition: 0.4s;*/
+    }
+
+    .hero-heading.video-title {
+        font-size: 40px;
+        padding: 0;
+        margin-bottom: 0;
+        line-height: 50px;
+        text-shadow: #1a1b1f;
+        transition: 0.4s;
+    }
+
+    .hero-subheading.video-title2 {
+        line-height: 45px;
+    }
+
     .sponsors-image {
         margin-right: 10px;
         margin-left: 10px;
@@ -911,6 +938,35 @@ a {
         display: inline-block;
     }
 
+    .background-video {
+        width: 600px;
+        /*height: 500px;*/
+        object-fit: scale-down;
+    }
+
+    .text-on-video {
+        z-index: 1;
+        opacity: 1;
+        margin-top: -200px;
+        margin-bottom: 10px;
+        display: grid;
+        justify-content: center;
+        letter-spacing: 1px;
+        transition: 0.4s;
+    }
+
+    .hero-heading.video-title {
+        font-size: 40px;
+        padding: 0;
+        margin-bottom: 0;
+        line-height: 45px;
+        text-shadow: #1a1b1f;
+        transition: 0.4s;
+    }
+
+    .hero-subheading.video-title2 {
+        line-height: 35px;
+    }
 
 
 }
