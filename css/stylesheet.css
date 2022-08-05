@@ -649,6 +649,15 @@ a {
     font-family: var(--font-header);
 }
 
+.love-banner {
+    padding-top: 250px;
+    padding-bottom: 250px;
+    background-image: url('../assets/images/derbylove.jpg');
+    background-position: 0 70%;
+    background-size: cover;
+    background-attachment: scroll;
+}
+
 /*--------------------------------------------------------------------------------*/
 /*------FOOTER SECTION STYLING----------------------------------------------------*/
 /*--------------------------------------------------------------------------------*/
@@ -775,6 +784,12 @@ a {
 
 @media screen and (min-device-width: 800px) and (max-width: 1600px) and (min-resolution: 192dpi) {
 
+    .love-banner {
+        display: block;
+        padding-top: 300px;
+        padding-bottom: 350px;
+    }
+
 }
 
 @media screen and  (min-width: 850px) and (max-width: 800px) {
@@ -785,6 +800,12 @@ a {
         margin-right: 20px;
         margin-bottom: 30px;
         margin-left: 20px;
+    }
+
+    .love-banner {
+        padding-top: 170px;
+        background-position: 30% 50%;
+        background-attachment: scroll;
     }
 
 }
@@ -976,6 +997,15 @@ a {
         font-family: var(--font-header);
     }
 
+    .love-banner {
+        width: 100%;
+        /*max-height: 300px;*/
+        padding-top: 200px;
+        padding-bottom: 170px;
+        object-fit: fill;
+        background-position: 30% 50%;
+        background-attachment: scroll;
+    }
 
     /*------FOOTER STYLING--------------------------------------------------------*/
 
@@ -1025,5 +1055,11 @@ a {
         flex-direction: column;
     }
 
+    .love-banner {
+        width: auto;
+        padding-top: 100px;
+        padding-bottom: 170px;
+        object-fit: fill;
+    }
 
 }
