@@ -16,6 +16,7 @@
     --bluish-teal-gradient: rgba(46, 157, 255, 0.22);
     --teal-green-super-dark: #192424;
     --bluish-teal-color: #6a859c;
+    --very-dark-gray-fonts: #404047;
     --dark-gray-selected: #32343a;
     --dark-gray-fonts: #676770;
     --dark-gray-footer: #404047;
@@ -599,6 +600,56 @@ a {
 }
 
 /*--------------------------------------------------------------------------------*/
+/*------MEMBERS PAGE: CONTENT STYLING-----------------------------------------------*/
+/*--------------------------------------------------------------------------------*/
+
+.team-circles {
+    position: relative;
+    padding: 80px 30px;
+}
+
+.team-grid {
+    display: grid;
+    margin-top: 50px;
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.team-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-member-image {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 25px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.team-member-name {
+    margin-bottom: 10px;
+    font-family: var(--font-header);
+    color: var(--dark-gray-selected);
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+}
+
+.team-member-position {
+    margin-bottom: 25px;
+    font-family: var(--font-header);
+    color: var(--dark-gray-selected);
+}
+
+.player-role {
+    font-family: var(--font-header);
+}
+
+/*--------------------------------------------------------------------------------*/
 /*------FOOTER SECTION STYLING----------------------------------------------------*/
 /*--------------------------------------------------------------------------------*/
 
@@ -965,6 +1016,13 @@ a {
     .hero-subheading.video-title2 {
         line-height: 30px;
         font-size: 20px;
+    }
+
+    /*--- MEMBERS PAGE--------------------------*/
+
+    .team-grid {
+        display: flex;
+        flex-direction: column;
     }
 
 
