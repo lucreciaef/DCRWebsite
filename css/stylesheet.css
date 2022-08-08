@@ -370,16 +370,18 @@ a {
     padding: 80px 30px;
     font-weight: 300;
     display: flex;
-    max-width: 750px;
+    max-width: 940px;
     margin-right: auto;
     margin-left: auto;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: center;
+    /*justify-content: flex-start;*/
+    /*align-items: center;*/
+    text-align: left;
 }
 
 .content-heading {
+    /*text-shadow: 1px 1px 6px #ffffff;*/
+    /*-webkit-text-stroke: 1px black;*/
     font-family: var(--font-header);
     color: var(--teal-team-color);
     font-size: 45px;
@@ -390,10 +392,11 @@ a {
 }
 
 .content-text {
-    margin-bottom: 24px;
+    margin-bottom: 25px;
+    margin-top: 50px;
     font-family: var(--font-body-content);
     color: var(--dark-gray-fonts);
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 300;
     text-decoration: none;
     transition: 0.5s;
@@ -404,7 +407,7 @@ a {
 }
 
 .content-text.intro {
-    text-align: center;
+    /*text-align: center;*/
 }
 
 .button-content {
@@ -415,15 +418,16 @@ a {
     font-weight: 300;
     letter-spacing: 2px;
     text-transform: uppercase;
-    display: inline-block;
-    margin-right: 10px;
-    margin-left: 10px;
+    display: block;
+    margin-right: 50px;
+    margin-left: 50px;
     border-radius: 4px;
     transition: background-color 300ms ease;
     color: white;
     font-size: 16px;
     text-align: center;
     text-decoration: none;
+    max-width: 200px;
 }
 
 .button-content:hover {
@@ -431,11 +435,21 @@ a {
     color: white;
 }
 
+.about-content-section-1-wrapper {
+    display: flex;
+}
+
 .about-image-1 {
     width: 100%;
     margin-top: 50px;
 }
 
+.DCR-logo-about {
+    margin-top: 50px;
+    width: 30vw;
+    max-width: 400px;
+
+}
 /*SECTION 2*/
 
 .about-content-section-2 {
