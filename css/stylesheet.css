@@ -617,6 +617,61 @@ a {
 /*------MEMBERS PAGE: CONTENT STYLING-----------------------------------------------*/
 /*--------------------------------------------------------------------------------*/
 
+.team-card-wrapper {
+    perspective: 150rem;
+    position: relative;
+    height: 16rem;
+}
+
+.team-card {
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16rem;
+    height: 16rem;
+    backface-visibility: hidden;
+    overflow: hidden;
+    box-shadow: var(--dark-gray-selected);
+    border-radius: 5px;
+    padding: 40px 20px 20px 20px;
+}
+
+.--front {
+    background-color: var(--teal-light-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.--back {
+    background-color: var(--teal-very-light-color);
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-card-info {
+    margin-left: 0;
+    padding-left: 0;
+    text-align: center;
+    list-style: none;
+    font-size: 20px;
+}
+
+.team-card-wrapper:hover .--front {
+    transform: rotateY(-180deg);
+}
+.team-card-wrapper:hover .--back {
+    transform: rotateY(0);
+}
+
+.card-logo {
+    margin-top: 20px;
+    max-width: 150px;
+}
+
 .team-circles {
     position: relative;
     padding: 80px 30px;
@@ -626,19 +681,19 @@ a {
     display: grid;
     margin-top: 50px;
     grid-column-gap: 50px;
-    grid-row-gap: 50px;
+    grid-row-gap: 80px;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.team-card {
+.team-card--front {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .team-member-image {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     margin-bottom: 25px;
     border-radius: 50%;
     object-fit: cover;
@@ -653,10 +708,13 @@ a {
     font-weight: 500;
 }
 
-.team-member-position {
-    margin-bottom: 25px;
+.team-member-details {
+    /*margin: 25px;*/
+    /*padding: 2rem;*/
     font-family: var(--font-header);
     color: var(--dark-gray-selected);
+    text-align: center;
+    padding-bottom: 20px;
 }
 
 .player-role {
@@ -822,6 +880,23 @@ a {
         background-attachment: scroll;
     }
 
+}
+
+@media screen and (max-width: 950px) {
+    /*.--front {*/
+    /*    background-color: var(--teal-light-color);*/
+    /*    display: block;*/
+    /*    !*flex-direction: column;*!*/
+    /*    align-items: center;*/
+    /*}*/
+
+    /*.--back {*/
+    /*    background-color: var(--teal-very-light-color);*/
+    /*    transform: rotateY(180deg);*/
+    /*    display: block;*/
+    /*    !*flex-direction: column;*!*/
+    /*    align-items: center;*/
+    /*}*/
 }
 
 @media screen and (max-width: 850px) {
