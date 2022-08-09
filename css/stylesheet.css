@@ -603,38 +603,54 @@ a {
 /*------MEMBERS PAGE: CONTENT STYLING-----------------------------------------------*/
 /*--------------------------------------------------------------------------------*/
 
+/*Ref: https://www.w3schools.com/howto/howto_css_flip_card.asp */
 .team-card-wrapper {
-    perspective: 150rem;
-    position: relative;
-    height: 16rem;
+    perspective: 1000px;
+    height: 25vh;
+    width: 25vw;
+    max-width: 280px;
+}
+
+.team-grid {
+    margin-top: 50px;
+    display: grid;
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-content: center;
+}
+
+.team-card--front {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .team-card {
-    transition: all 0.8s ease;
     position: absolute;
+    transition: transform 0.8s;
     top: 0;
     left: 0;
-    width: 16rem;
-    height: 16rem;
     backface-visibility: hidden;
     overflow: hidden;
     box-shadow: var(--dark-gray-selected);
     border-radius: 5px;
-    padding: 40px 20px 20px 20px;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 0;
 }
 
 .--front {
     background-color: var(--teal-light-color);
-    display: flex;
-    flex-direction: column;
     align-items: center;
 }
 
 .--back {
     background-color: var(--teal-very-light-color);
     transform: rotateY(180deg);
-    display: flex;
-    flex-direction: column;
     align-items: center;
 }
 
@@ -650,11 +666,13 @@ a {
     transform: rotateY(-180deg);
 }
 .team-card-wrapper:hover .--back {
+    position: absolute;
+    backface-visibility: hidden;
     transform: rotateY(0);
 }
 
 .card-logo {
-    margin-top: 20px;
+    margin-top: 50px;
     max-width: 150px;
 }
 
@@ -663,24 +681,11 @@ a {
     padding: 80px 30px;
 }
 
-.team-grid {
-    display: grid;
-    margin-top: 50px;
-    grid-column-gap: 50px;
-    grid-row-gap: 80px;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-.team-card--front {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .team-member-image {
+    margin-top: 25px;
+    margin-bottom: 25px;
     width: 200px;
     height: 200px;
-    margin-bottom: 25px;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -695,8 +700,6 @@ a {
 }
 
 .team-member-details {
-    /*margin: 25px;*/
-    /*padding: 2rem;*/
     font-family: var(--font-header);
     color: var(--dark-gray-selected);
     text-align: center;
@@ -847,22 +850,9 @@ a {
 
 }
 
-@media screen and (max-width: 950px) {
-    /*.--front {*/
-    /*    background-color: var(--teal-light-color);*/
-    /*    display: block;*/
-    /*    !*flex-direction: column;*!*/
-    /*    align-items: center;*/
-    /*}*/
+/*@media screen and (max-width: 950px) {*/
 
-    /*.--back {*/
-    /*    background-color: var(--teal-very-light-color);*/
-    /*    transform: rotateY(180deg);*/
-    /*    display: block;*/
-    /*    !*flex-direction: column;*!*/
-    /*    align-items: center;*/
-    /*}*/
-}
+/*}*/
 
 @media screen and (max-width: 850px) {
 
@@ -976,7 +966,7 @@ a {
         margin-bottom: 20px;
     }
 
-    /*About content*/
+    /*About content-------------------------------------------------------------*/
     .section-wrapper {
         display: block;
         justify-content: space-between;
@@ -1051,6 +1041,63 @@ a {
         font-family: var(--font-header);
     }
 
+    /*---MEMBERS PAGE ------------------------------------------------------------*/
+
+    .container {
+        max-width: 850px;
+    }
+
+    /*Skaters cards reorganize*/
+
+    .team-grid {
+        display: grid;
+        grid-column-gap: 50px;
+        grid-row-gap: 50px;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .team-card-wrapper {
+        height: 25vh;
+        align-content: center;
+        width: 35vw;
+    }
+
+    .team-card {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+    }
+
+    .--front {
+        background-color: var(--teal-light-color);
+        align-items: center;
+    }
+
+    .--back {
+        background-color: var(--teal-very-light-color);
+        transform: rotateY(180deg);
+    }
+
+    .team-card-info {
+        margin-left: 0;
+        padding-left: 0;
+        text-align: center;
+        list-style: none;
+        font-size: 20px;
+    }
+
+    .card-logo {
+        margin-top: 50px;
+    }
+
+    .team-member-image {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
 
     /*------FOOTER STYLING--------------------------------------------------------*/
 
@@ -1095,9 +1142,17 @@ a {
 
     /*--- MEMBERS PAGE--------------------------*/
 
+    /*Skaters cards reorganize*/
+
     .team-grid {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-row-gap: 40px;
+        grid-template-columns: auto;
+        align-content: center;
+    }
+
+    .team-card-wrapper {
+        width: 60vw;
     }
 
 

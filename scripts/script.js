@@ -24,7 +24,6 @@ let sticky = navbar.offsetTop;
 function addStickyClassToNavBar() {
 	if (window.pageYOffset >= sticky) { //pageYOffset is deprecated, scrollY is interchangeable(?)
 		navbar.classList.add("sticky-nav-bar");
-		console.log("scroll test")
 	} else {
 		navbar.classList.remove("sticky-nav-bar");
 	}
