@@ -550,16 +550,6 @@ a {
     font-size: 32px;
 }
 
-/*.testimonials-grid {*/
-/*    display: grid;*/
-/*    margin: 30px;*/
-/*    grid-auto-columns: 1fr;*/
-/*    grid-column-gap: 40px;*/
-/*    grid-row-gap: 40px;*/
-/*    grid-template-columns: 1fr 1fr 1fr;*/
-/*    grid-template-rows: auto;*/
-/*}*/
-
 .testimonials-grid {
     display: flex;
     flex-wrap: wrap;
@@ -771,7 +761,7 @@ a {
     text-transform: uppercase;
 }
 
-.news-article-margin {
+.news-article-text {
     margin-bottom: 24px;
     font-family: var(--font-body-content);
 }
@@ -779,13 +769,15 @@ a {
 .button-primary-2 {
     padding: 12px 25px;
     background-color: var(--teal-team-strong);
-    transition: all 200ms ease;
+    transition: all 300ms ease;
     font-family: var(--font-body-content);
     color: #fff;
     font-size: 12px;
     line-height: 20px;
     letter-spacing: 2px;
     text-transform: uppercase;
+    border: none;
+    cursor: pointer;
 }
 
 .button-primary-2:hover {
@@ -797,11 +789,11 @@ a {
     background-color: #43464d;
 }
 
-.button-primary-2.footer-form-button {
-    position: absolute;
-    right: 8px;
-    padding: 8px 18px;
-}
+/*.button-primary-2.footer-form-button {*/
+/*    position: absolute;*/
+/*    right: 8px;*/
+/*    padding: 8px 18px;*/
+/*}*/
 
 .article-img-news {
     max-width: 90%;
@@ -812,6 +804,11 @@ a {
 .news-margin {
     padding-left: 20px;
     margin-bottom: -30px;
+}
+
+/*Making the img to stay on top of the article section when the text is expanded*/
+.section-wrapper.news-section {
+    display: -webkit-box;
 }
 
 /*--------------------------------------------------------------------------------*/
@@ -1279,9 +1276,28 @@ a {
         max-width: 350px;
     }
 
-
     .footer-upper-block {
         display: inline-block;
     }
 
 }
+
+/*!*!*Expanding article content by clicking the button*!*! MAYBE TO USE LATER*/
+/*.news-article-margin.article-details,*/
+/*.button-primary-2.article-visible,*/
+/*.button-primary-2.article-hidden:target {*/
+/*    display: none;*/
+/*}*/
+
+/*.button-primary-2.article-hidden:target + .button-primary-2.article-visible,*/
+/*.button-primary-2.article-hidden:target ~ .news-article-margin.article-details {*/
+/*    display: block;*/
+/*}*/
+
+/*<div class="section-split">*/
+/*                          <div class="date-text-block">11 June 2022</div>*/
+/*                                                                     <h1 class="article-heading">Austrian Championships</h1>*/
+/*                                                                                                                         <a id="hide1" href="#hide1" class="button-primary-2 article-hidden">Click to expand</a>*/
+/*                                                                                                                                                                                                              <a id="show1" href="#show1" class="button-primary-2 article-visible">Click to hide</a>*/
+/*                                                                                                                                                                                                                                                                                                  <p class="news-article-margin article-details">Vienna Roller Derby, Fearless Bruisers (Innsbruck), Steel City Rollers (Linz) supported by SBG Knockouts (Salzburg) and Dust City Rollers (Graz) are competing for the title of Austrian champion in 6 games over 2 days. There will also be an exciting entertainment program between games!</p>*/
+/*                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>*/

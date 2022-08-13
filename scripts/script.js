@@ -33,7 +33,9 @@ function addStickyClassToNavBar() {
 //----FUNCTIONALITIES
 //------------------------------------------------------------------------------------------------
 
-// Making FAQ question banners in accordion style. Ref: https://dev.to/w3tsa/best-way-to-build-an-accordion-faq-in-html-css-and-js-54a6
+// Making FAQ question banners in accordion style.
+// Inspiration and Ref: https://dev.to/w3tsa/best-way-to-build-an-accordion-faq-in-html-css-and-js-54a6
+
 // Get all FAQ banners available
 let faqQuestionBanners = document.querySelectorAll(".question-banner");
 
@@ -58,4 +60,30 @@ for (const faqQuestionBannerElement of faqQuestionBanners) {
 			nextBannerSection.style.maxHeight = nextBannerSection.scrollHeight + 'px';
 		}
 	})
+}
+
+// Expanding and collapsing article text in the Events page.
+// Ref: https://www.w3schools.com/howto/howto_js_read_more.asp
+// Help from: https://stackoverflow.com/questions/29614210/storing-document-getelementbyid-in-a-variable
+// Help from: https://developer.mozilla.org/en-US/docs/Web/CSS/:scope
+
+function clickToReadMore(element) { //Passing current clicked button as element
+	let clickedButton = element;
+	let buttonParent = element.parentElement; //Getting the parent of the clicked button
+
+	//Select the next element with class "--summary-text" that is a child of the current parent element
+	let dots = buttonParent.querySelector(':scope > .--summary-text');
+	let moreText = buttonParent.querySelector(':scope > .--full-text');
+
+	// Toggle between showing one <p> (summary) or the other (full text)
+	if (dots.style.display === "none") {
+		dots.style.display = "block";
+		clickedButton.innerHTML = "Click to read more";
+		moreText.style.display = "none";
+	} else {
+		dots.style.display = "none";
+		clickedButton.innerHTML = "Click to hide text";
+		moreText.style.display = "block";
+	}
+
 }
