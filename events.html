@@ -40,64 +40,259 @@
     </header>
     <!--END HEADER SECTION-->
 
-<!--    HERO SECTION-->
+    <!--HERO SECTION-->
     <section class="hero-section events hero">
-        <div class="hero-title-box">
+        <header class="hero-title-box">
             <h1 class="hero-heading">Events &amp; News</h1>
-        </div>
+        </header>
     </section>
-<!--    END HERO SECTION-->
+    <!--END HERO SECTION-->
 
-<!--    ARTICLES SECTION-->
+    <!--ARTICLES SECTION-->
+    <!--Expanding text with buttons-->
     <article class="article-container container">
-        <div class="section-wrapper">
-            <div class="section-split">
-                <img class="article-img-news" src="assets/images/dcr-championships-website-1920x1080-NEU-min-1170x650.jpg" loading="lazy" alt="">
+        <div class="section-wrapper news-section">
+            <div class="section-split news-margin">
+                <img class="article-img-news" src="assets/images/dcr-championships-website-1920x1080-NEU-min-1170x650.jpg" loading="lazy" alt="Championships Promotional Poster">
             </div>
             <div class="section-split">
                 <div class="date-text-block">11 June 2022</div>
                 <h1 class="article-heading">Austrian Championships</h1>
-                <p class="news-article-margin">Vienna Roller Derby, Fearless Bruisers (Innsbruck), Steel City Rollers (Linz) supported by SBG Knockouts (Salzburg) and Dust City Rollers (Graz) are competing for the title of Austrian champion in 6 games over 2 days. There will also be an exciting entertainment program between games!</p>
-                <a href="#" class="button-primary-2">Click to read more</a>
+                <p class="news-article-text --summary-text">
+                    Vienna Roller Derby, Fearless Bruisers (Innsbruck),
+                    Steel City Rollers (Linz) supported by SBG Knockouts (Salzburg)
+                    and Dust City Rollers (Graz) are competing<span style="display: inline-block">...</span></p>
+                <p class="news-article-text --full-text" style="display: none">Vienna Roller Derby, Fearless Bruisers (Innsbruck), Steel City Rollers (Linz) supported by SBG Knockouts (Salzburg) and Dust City Rollers (Graz) are competing for the title of Austrian champion in 6 games over 2 days. There will also be an exciting entertainment program between games!
+                    Vienna Roller Derby, Fearless Bruisers (Innsbruck), Steel City Rollers (Linz) supported by SBG Knockouts (Salzburg) and Dust City Rollers (Graz) are competing for the title of Austrian champion in 6 games over 2 days. There will also be an exciting entertainment program between games! Entertainment heros Circle A and the famous cheerleading team Vienna Fearleaders have already been confirmed.
+
+                    The event is family friendly (hearing protection recommended for young children).<br>Accessible seating is available.<br>
+                    <br>
+                    <strong>Tickets:</strong><br>
+                    https://www.ticketsforshows.com/rollerderbyaustria<br><br>
+
+                    <strong>Weekend Pass</strong><br>
+                    Reduced (low income) 12€<br>
+                    Regular 15€<br>
+                    Support Ticket 25€<br>
+                    <strong>Day Ticket</strong>
+                    Reduced (low income) 7€<br>
+                    Regular 10€<br>
+                    Support Ticket 15€<br><br>
+
+                    Free admission for kids under 12.<br><br>
+
+                    11 June 10:00 – 17:30<br>
+                    12 June 09:00 – 16:00<br><br>
+
+
+                    <strong>GAMEDAY 1</strong><br>
+                    SATURDAY JUNE 11TH<br>
+                    Game 1<br>
+                    Dust City Rollers (Graz) VS. Fearless Bruisers (Innsbruck)<br>
+                    (Start: 10:00)<br><br>
+
+                    Game 2<br>
+                    Steelcity Rollers (Linz/Salzburg) VS. Vienna Roller Derby (Wien)<br>
+                    (Start: 12:10)<br><br>
+
+                    Game 3<br>
+                    Dust City Rollers (Graz) VS. Vienna Roller Derby (Wien)<br>
+                    (Start: 14:40)<br><br>
+
+                    Bonus game<br>
+                    Stop & Contact Mixed Scrimmage<br>
+                    (Start: 17:00)<br><br>
+
+
+
+                    <strong>GAMEDAY 2</strong><br>
+                    SUNDAY JUNE 12TH<br>
+                    Game 4<br>
+                    Fearless Bruisers (Innsbruck) VS. Steelcity Rollers (Linz/Salzburg)<br>
+                    (Start: 9:00)<br><br>
+
+                    Game 5<br>
+                    Fearless Bruisers (Innsbruck) VS. Vienna Roller Derby (Wien)<br>
+                    (Start: 11:15)<br><br>
+
+                    Game 6<br>
+                    Dust City Rollers (Graz) VS. Steelcity Rollers (Linz/Salzburg)<br>
+                    (Start: 13:50)<br><br>
+
+                    Award ceremony: 15:30<br><br>
+
+                    We recommend arriving at the venue by public transport or bikes. The best connections for visitors are tram lines 1 and 7 (Tram stop “Reiterkaserne”)</p>
+                <button class="button-primary-2" onclick="clickToReadMore(this)">Click to read more</button>
             </div>
         </div>
     </article>
     <article class="article-container container">
-        <div class="section-wrapper">
+        <div class="section-wrapper news-section">
             <div class="section-split news-margin">
-                <img class="article-img-news" src="assets/images/dcr-lrg-2021-1-1170x650.jpg" loading="lazy" alt="">
+                <img class="article-img-news" src="assets/images/dcr-lrg-2021-1-1170x650.jpg" loading="lazy" alt="Let's Go Graz Promo Poster">
             </div>
             <div class="section-split">
                 <div class="date-text-block">2 October 2021</div>
                 <h1 class="article-heading">Let's go Graz</h1>
-                <p class="news-article-margin">Das Wochenende das unter dem Motto “Let’s Roll, Graz” stand, war für die Roller Derby Community in Graz ein erfolgreiches! Am Samstag, 25. September durften die Dust City Rollers in der Sportunionhalle viele neue interessierte Skaterinnen an ihrem Newbie Day begrüßen...</p>
-                <a href="#" class="button-primary-2">Click to read more</a>
+                <p class="news-article-text --summary-text">
+                    The weekend under the motto "Let's Roll, Graz" was a successful one for the roller derby
+                    community in Graz! On Saturday, September 25, the Dust City Rollers welcomed
+                <span style="display: inline-block">...</span></p>
+                <p class="news-article-text --full-text" style="display: none">
+                    The weekend under the motto "Let's Roll, Graz" was a successful one for the roller derby
+                    community in Graz! On Saturday, September 25, the Dust City Rollers welcomed many new
+                    interested skaters at their Newbie Day in the Sportunionhalle. Those interested were
+                    able to try out different exercises and get used to skating on 8 wheels for a bit.
+                    During a Q&A afterwards, the Dust City Rollers were able to present their club life,
+                    and are now hoping for many new registrations.
+                    Due to the purchase of some new rental equipment, which could be financed by the Sportjahr project,
+                    the financial hurdles of full contact sports can now be reduced significantly
+                    for many new beginners. <br><br>
+
+                    On Sunday, September 26, the second part of the Roller Derby weekend took place.
+                    During an open training session interested visitors could watch and get to know
+                    Roller Derby better. We also wanted to make Roller Derby open to the public again,
+                    after there had been no Roller Derby live event in Graz for over 1.5 years due to the pandemic.
+                    The Dust City Rollers were trained by 2 experienced coaches from Vienna Roller Derby and
+                    could take a lot of new impulses with them. The Dust City Rollers look back on a successful
+                    weekend and are glad to have made the fringe sport Roller Derby a bit more visible in Graz.
+                </p>
+                <button class="button-primary-2" onclick="clickToReadMore(this)">Click to read more</button>
             </div>
         </div>
     </article>
     <article class="article-container container">
-        <div class="section-wrapper">
-            <div class="section-split">
+        <div class="section-wrapper news-section">
+            <div class="section-split news-margin">
                 <img class="article-img-news" src="assets/images/dcr-letsrollgraz-sujet-event-website.png" loading="lazy" alt="">
             </div>
             <div class="section-split">
                 <div class="date-text-block">21 August 2021</div>
                 <h1 class="article-heading">Newbie day and Open practice</h1>
-                <p class="news-article-margin">We are looking for new skaters again, this is your chance to start playing roller derby! If you want to become part of our team, sign up for our Newbie Day on 25 September 1-5 p.m. at Sportunion Gaußgasse 3, 8010 Graz. We will provide all the equipment you need, teach you the basics and tell you everything about our team and what it means to be a Dusty. ...</p>
-                <a href="#" class="button-primary-2">Click to read more</a>
+                <p class="news-article-text --summary-text">
+                    We are looking for new skaters again, this is your chance to start playing roller derby!
+                    If you want to become part of our team, sign up for
+                <span style="display: inline-block">...</span></p>
+                <p class="news-article-text --full-text" style="display: none">
+                    We are looking for new skaters again, this is your chance to start playing roller derby!
+                    If you want to become part of our team, sign up for our Newbie Day on 25 September 1-5 p.m.
+                    at Sportunion Gaußgasse 3, 8010 Graz. We will provide all the equipment you need, teach you
+                    the basics and tell you everything about our team and what it means to be a Dusty.
+                    We can’t wait to meet you! Sign up today!<br><br>
+                    Please note, everyone who wants to participate has to sign up for the event until September
+                    18th via e-mail to contact@dcrollers.com – everyone is welcome!<br><br>
+
+                    We will teach you what you need to know and provide gear for you.
+                    Upon your arrival, we will ask you to show us an official Covid-19 test.
+                    Otherwise, you cannot participate. We would also ask you to wear a mask whenever
+                    you enter or leave the sports hall.<br><br>
+
+                    Have you ever wanted to jam, block and pivot? Guard the pack either as a referee
+                    or NSO (non-skating official)? Or do you simply want to see if roller derby is for you?
+                    Our newbie day on 25th September is your chance!<br><br>
+
+                    If you want to participate:<br><br>
+
+                    you need to be at least 18 years old<br>
+                    women (cis, trans, and inter) and non-binary people can join us as skaters,
+                    referees, or NSOs (non-skating officials)<br>
+                    men who are interested in becoming referees or NSOs are welcome too<br>
+                    we will provide our skates and equipment, but if you happen to own a helmet or knee-
+                    and elbowpads or wrist guards, please bring them along<br>
+                    We’re looking forward to meeting you!<br><br>
+
+                    Timetable:<br>
+                    1 pm: Arrival and checking Covid-19 test<br>
+                    1.15: Watch what happens during our roller derby practice, as experienced
+                    skater will sit with you and explain<br>
+                    1.45: Warm up for everyone<br>
+                    2 pm: Gear up!<br>
+                    2.15: Your very first roller derby practice! We will teach you all the basics,
+                    and you get a feeling for skating and being part of the team<br>
+                    4 pm: Team talk and time for Q&A: We will talk about our club life and what it
+                    means to be part of the wider roller derby community. Of course, there is plenty of
+                    time for you to ask questions!
+                </p>
+                <button class="button-primary-2" onclick="clickToReadMore(this)">Click to read more</button>
             </div>
         </div>
     </article>
     <article class="article-container container">
-        <div class="section-wrapper">
-            <div class="section-split">
+        <div class="section-wrapper news-section">
+            <div class="section-split news-margin">
                 <img class="article-img-news" src="assets/images/covid-1170x650.jpg" loading="lazy" alt="">
             </div>
             <div class="section-split">
-                <div class="date-text-block">13 march 2020</div>
-                <h1 class="article-heading">COVID-19 SAFETY REGULATIONS</h1>
-                <p class="news-article-margin">Following the recommendations of the Austrian Federal Government and the WFTDA, we have suspended all team activities (trainings &amp; gatherings) until further notice as a precautionary measure for the containment of Covid-19.</p>
-                <a href="#" class="button-primary-2">Click to read more</a>
+                <div class="date-text-block">15 December 2019</div>
+                <h1 class="article-heading">Austrian Roller Derby Championship 2019</h1>
+                <p class="news-article-text --summary-text">
+                    The third Austrian Roller Derby Championships took place from November 30th to December 1st.
+                    The event was hosted by the Fearless Bruisers – Roller Derby Innsbruck, who did
+                <span style="display: inline-block">...</span></p>
+                <p class="news-article-text --full-text" style="display: none">
+                    The third Austrian Roller Derby Championships took place from November 30th to December 1st.
+                    The event was hosted by the Fearless Bruisers – Roller Derby Innsbruck, who did an amazing
+                    job organizing this year’s champs. We played four games on two days and managed
+                    to take back the third place!<br><br>
+
+                    The first game for the Dusties on Saturday was against the newest team in Austria,
+                    SBG Knockouts Roller Derby. We have already shared the track with skaters from Salzburg
+                    on different occasions, but it was exciting to play against an entirely new team.
+                    Salzburg was a strong opponent, but we managed to win 144:89 in the end.<br><br>
+
+                    The Dusties played the hosts, Fearless Bruisers, on their second game on Saturday.
+                    Innsbruck were as strong as expected, but we were able to apply some strategies
+                    we’ve prepared, even though we had to focus on defense mostly. Unfortunately we had
+                    quite a few penalties on the first day in our team, but this changed for the
+                    better on the second day. Innsbruck took the win with 179:75.
+                    Thank you, again, for organizing such a great event!<br><br>
+
+                    On the second day we played Vienna and Linz. We could feel that it was already the
+                    second day and that we were a little exhausted. Unfortunately, within our team we
+                    had a few health problems over the weekend including cramps, migraines, colds and
+                    one of our strongest blockers – J. Butcher – wasn’t able to play at all due to illness
+                    in the week before champs. J. managed to travel to Innsbruck despite everything
+                    and joined their team on the bench.<br><br>
+
+                    The first game was against Vienna Roller Derby and we enjoyed playing our big
+                    derby sisters a lot! VRD play amazing and clean roller derby, which is why we had
+                    a great time on track. The game ended 302:40 for Vienna Roller Derby. A few times,
+                    we could implement some new offense strategies, but most of the game we had to focus
+                    on defense. Fortunately, we could reduce penalties on the second day. For the first
+                    three games, our guests from Ljubljana Kriss Me and Rea Stardust joined us as blockers
+                    on track. Marica Mandona from VRD played all four games as a guest.
+                    Thank you so much from the bottom of our hearts!<br><br>
+
+                    The last game on Sunday was the one we were definitely most excited about.
+                    The Steelcity Rollers from Linz were founded a few months before us and started
+                    off on a very similar level. We always went back and forth with wins between the
+                    teams. In the first year of champs, we could take home bronze. In the second,
+                    the third place went to Linz, so, naturally, we were extremely nervous about
+                    who would win this game! We immediately managed to get a head start and were
+                    able to extend it up to around 30 points. However, shortly before half time
+                    we played a disastrous jam that cost us our lead. Linz were able to score 25
+                    points and there was a tie. We immediately took a time out and tried to get back
+                    our focus. After halftime we started with a few strong jams and could take the lead
+                    again. Still, it was close for the most part, so we had to really give our all
+                    until the very end. We won the game 93:81 so we could take home bronze again!<br><br>
+
+                    We definitely could have shown a little more confidence and actually apply more
+                    of what we’ve been practicing this year, but overall we are very happy with our
+                    performance and hope to improve next year. We’ve welcomed a few new blockers on
+                    the team, as well as a new jammer – Johammer – who used to be a blocker before.
+                    Special shout out to Lisilotta Rollgardina, who only started skating in February
+                    this year, and already played as a blocker with us in all four games! Moreover,
+                    we were very happy to have a great bench team at champs and all the other games this year.<br><br>
+
+                    Our officials, Captain Robvious, Cloud Stripe and Confuzzed were also quite busy
+                    officiating as referees all weekend, and so was Thea who took up different positions
+                    as Non-Skating-Official. Thanks for your support!<br><br>
+
+                    On our way back from Innsbruck we treated ourselves to some relaxing hours at the
+                    spa. For next year, we have a few exciting things planned, so we hope to see you
+                    at one of our bouts. For now, we wish everyone relaxing holidays and a happy new year!
+                </p>
+                <button class="button-primary-2" onclick="clickToReadMore(this)">Click to read more</button>
             </div>
         </div>
     </article>
