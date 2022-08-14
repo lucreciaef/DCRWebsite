@@ -44,20 +44,20 @@ for (const faqQuestionBannerElement of faqQuestionBanners) {
 		let nextBannerSection = this.nextElementSibling;
 
 		// Toggle css class to add the 'permanently active' style
-		this.classList.toggle('active-question-banner');
+		this.classList.toggle("active-question-banner");
 
 		// When toggling, switch display to block or none
-		if (nextBannerSection.style.display !== 'block') {
-			nextBannerSection.style.display = 'block';
+		if (nextBannerSection.style.display !== "block") {
+			nextBannerSection.style.display = "block";
 		} else {
-			nextBannerSection.style.display = 'none';
+			nextBannerSection.style.display = "none";
 		}
 
 		// Add height of the text section to make it visible
-		if (nextBannerSection.style.display === 'none') {
+		if (nextBannerSection.style.display === "none") {
 			nextBannerSection.style.maxHeight = null;
 		} else {
-			nextBannerSection.style.maxHeight = nextBannerSection.scrollHeight + 'px';
+			nextBannerSection.style.maxHeight = nextBannerSection.scrollHeight + "px";
 		}
 	})
 }
@@ -85,5 +85,4 @@ function clickToReadMore(element) { //Passing current clicked button as element
 		clickedButton.innerHTML = "Click to hide text";
 		moreText.style.display = "block";
 	}
-
 }

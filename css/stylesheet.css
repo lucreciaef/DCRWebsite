@@ -736,18 +736,6 @@ a {
     background-color: var(--white-almost);
 }
 
-/*.section-wrapper {*/
-/*    margin-bottom: -40px;*/
-/*    flex-direction: column;*/
-/*    justify-content: flex-start;*/
-/*    align-items: flex-start;*/
-/*}*/
-
-/*.section-split {*/
-/*    max-width: 100%;*/
-/*    margin-bottom: 40px;*/
-/*}*/
-
 .date-text-block {
     font-family: var(--font-header);
     color: var(--teal-team-color);
@@ -788,12 +776,6 @@ a {
 .button-primary-2:active {
     background-color: #43464d;
 }
-
-/*.button-primary-2.footer-form-button {*/
-/*    position: absolute;*/
-/*    right: 8px;*/
-/*    padding: 8px 18px;*/
-/*}*/
 
 .article-img-news {
     max-width: 90%;
@@ -1219,6 +1201,27 @@ a {
 
     /*---EVENTS PAGE--------------------------------------------------------------*/
 
+    .article-container {
+        position: relative;
+        padding: 50px 50px 10px;
+    }
+
+    .article-img-news {
+        max-width: 96%;
+        transition: 0.3s;
+        box-shadow: 0 4px 24px 0 rgba(150, 163, 181, 0.08);
+    }
+
+    .news-margin {
+        padding-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    /*Making the img to stay on top of the article section when the text is expanded*/
+    .section-wrapper.news-section {
+        display: flex;
+        flex-direction: column;
+    }
 
 
     /*------FOOTER STYLING--------------------------------------------------------*/
@@ -1228,7 +1231,6 @@ a {
 @media screen and (max-width: 600px) {
 
     /*------CONTENT STYLING-------------------------------------------------------*/
-
     .hero-heading {
         margin-left: 20px;
         margin-right: 20px;
@@ -1250,9 +1252,7 @@ a {
 
 
     /*--- MEMBERS PAGE--------------------------*/
-
     /*Skaters cards reorganize*/
-
     .team-grid {
         display: grid;
         grid-row-gap: 40px;
@@ -1271,33 +1271,32 @@ a {
         object-fit: fill;
     }
 
-    /*---EVENTS PAGE--------------------------------*/
-    .article-img-news {
-        max-width: 350px;
+    /*---EVENTS PAGE--------------------------------------------------------------*/
+
+    .article-container {
+        position: relative;
+        padding: 30px 30px 10px;
     }
+
+    .article-img-news {
+        max-width: 100%;
+    }
+
+    .news-margin {
+        padding-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    /*Making the img to stay on top of the article section when the text is expanded*/
+    .section-wrapper.news-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /*---FOOTER-----------------------------------------------------------------*/
 
     .footer-upper-block {
         display: inline-block;
     }
 
 }
-
-/*!*!*Expanding article content by clicking the button*!*! MAYBE TO USE LATER*/
-/*.news-article-margin.article-details,*/
-/*.button-primary-2.article-visible,*/
-/*.button-primary-2.article-hidden:target {*/
-/*    display: none;*/
-/*}*/
-
-/*.button-primary-2.article-hidden:target + .button-primary-2.article-visible,*/
-/*.button-primary-2.article-hidden:target ~ .news-article-margin.article-details {*/
-/*    display: block;*/
-/*}*/
-
-/*<div class="section-split">*/
-/*                          <div class="date-text-block">11 June 2022</div>*/
-/*                                                                     <h1 class="article-heading">Austrian Championships</h1>*/
-/*                                                                                                                         <a id="hide1" href="#hide1" class="button-primary-2 article-hidden">Click to expand</a>*/
-/*                                                                                                                                                                                                              <a id="show1" href="#show1" class="button-primary-2 article-visible">Click to hide</a>*/
-/*                                                                                                                                                                                                                                                                                                  <p class="news-article-margin article-details">Vienna Roller Derby, Fearless Bruisers (Innsbruck), Steel City Rollers (Linz) supported by SBG Knockouts (Salzburg) and Dust City Rollers (Graz) are competing for the title of Austrian champion in 6 games over 2 days. There will also be an exciting entertainment program between games!</p>*/
-/*                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>*/
