@@ -31,7 +31,7 @@
             <a href="about.html" class="navigation-link">About</a>
             <a href="members.html" class="navigation-link">Members</a>
             <a href="events.html" class="navigation-link">Events</a>
-            <a href="contact.html" class="navigation-link --current">Officiating</a>
+            <a href="contact.html" class="navigation-link --current">Contact</a>
             <a href="javascript:void(0);" class="menu-icon" onclick="clickOnMenuButton()">
                 <i class="fa fa-bars"></i>
             </a>
@@ -40,14 +40,39 @@
 </header>
 <!--END HEADER SECTION-->
 
-<section id="test">
-    .
-    .
-    <br>    <br>   . . <br>    <br>    <br>   . .  <br>    <br>    <br>    <br>    <br>    <br>    <br>
-    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>
-    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>
+<!--CONTACT FORM-->
+<section class="contact-page-background">
+    <section class="contact-page-wrapper container" aria-label="Contact form">
 
+        <h2 class="section-heading">Contact Us!</h2>
+        <img src="assets/images/dcr_galerie5-min-735x240.jpg" loading="lazy" alt="" class="contact-banner">
+        <div class="section-subheading">We are always open for new skaters and officials</div>
+        <p class="contact-us-text">Are you interested in joining our team? Do you want to give it a try?<br>Are you an official in another team and you would like to collaborate with us?<br>Are you looking for sponsoring opportunities with us? <br>Send us an email by completing the form below!</p>
+
+        <section class="contact-form-wrapper">
+            <form id="email-form" name="email-form" data-name="Email Form" method="get" class="form-fields-wrapper">
+                <label for="Name" class="label-id">Your name</label>
+                    <input type="text" class="form-field" maxlength="256" name="Your name" data-name="Name" placeholder="Enter your name..." id="Name" required="">
+                <label for="Email" class="label-id">Your Email address</label>
+                    <input type="email" class="form-field" maxlength="256" name="Email address" data-name="Email" placeholder="Enter your email..." id="Email" required="">
+                <label for="Message-field" class="label-id">Your message</label>
+                    <textarea id="Message-field" name="message-field" placeholder="Enter your message here" maxlength="5000" data-name="message-field" class="form-field text-area"></textarea>
+                    <input type="submit" value="Send Email" data-wait="Please wait..." class="button send-email"></form>
+
+<!--            &lt;!&ndash; Ref: https://www.w3schools.com/howto/howto_js_alert.asp&ndash;&gt;-->
+<!--            <div id="form-done" class="alert form-done" style="display: none">-->
+<!--                <span class="close-btn" onclick="this.parentElement.style.display='none';">&times;</span>-->
+<!--                Thank you! Your submission has been received!-->
+<!--            </div>-->
+<!--            <div id="form-fail" class="alert form-fail" style="display: none">-->
+<!--                <span class="close-btn" onclick="this.parentElement.style.display='none';">&times;</span>-->
+<!--                Oops! Something went wrong while submitting the form :(-->
+<!--            </div>-->
+        </section>
+        <img class="contact-bottom-img" src="assets/images/dcr_galerie3-min-360x240.jpg" loading="lazy" alt="Since 2016">
+    </section>
 </section>
+<!--END CONTACT FORM-->
 
 <!--FOOTER SECTION-->
 <footer class="footer">

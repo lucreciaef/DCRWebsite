@@ -86,3 +86,17 @@ function clickToReadMore(element) { //Passing current clicked button as element
 		moreText.style.display = "block";
 	}
 }
+
+// Adding alert boxes to let the user know that the email was sent
+// Only to show as a demo, as the "Send Email" functionality won't work without a server
+
+// function clickToSendEmail() {
+// 	let emailSentAlert = document.getElementById("#form-done");
+// 	console.log(emailSentAlert);
+//
+// 	if (emailSentAlert.style.display === "none") {
+// 		emailSentAlert.style.display = "block";
+// 	} else {
+// 		emailSentAlert.style.display = "none";
+// 	}
+// }
