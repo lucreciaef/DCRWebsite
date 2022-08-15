@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--Defer keyword ensures that DOM is loaded completely before running JS script-->
     <script src="scripts/script.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--Source of font tool https://github.com/typekit/webfontloader-->
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
     <script type="text/javascript">
@@ -20,7 +21,7 @@
 			}
 		});</script>
 </head>
-<body>
+<body class="">
 
     <!--HEADER SECTION-->
     <header class="nav-header" aria-label="navigation menu" role="banner" id="nav-header-id">
@@ -53,8 +54,24 @@
     </section>
     <!--END HERO SECTION-->
 
+    <!--    ACCESSIBILITY TOOLS-->
+    <aside class="accessibility-options">
+        <section class="accessibility-menu expand-accessibility" title="Accessibility Options">
+            <a href="#"><i class="fa fa-wheelchair"></i></a>
+        </section>
+        <section class="all-acc-options" style="display: none;">
+            <section id="contrast-option" class="acc-option" title="Increase Contrast">
+                <a href="#"><i class="fa fa-sliders"></i></a>
+            </section>
+            <section id="font-option" class="acc-option" title="Readable Font">
+                <a href="#"><i class="fa fa-font"></i></a>
+            </section>
+        </section>
+    </aside>
+    <!--    END ACCESSIBILITY TOOLS-->
+
     <!--SPONSORS SECTION-->
-    <section class="sponsors-section container">
+    <article class="sponsors-section container">
         <h2 class="content-heading secondary-header">Our Sponsors</h2>
         <div class="sponsors-row">
             <img src="assets/images/ocarolans_logo-01gross-01-1024x814.jpg" loading="lazy" style="width: 116px;" alt="Irish Bar logo" class="sponsors-image">
@@ -64,15 +81,15 @@
         <div class="sponsors-row">
             <img src="assets/images/Logo-Stadt-Graz-neu-1024x324.jpg" loading="lazy" style="width: 152px;" alt="Graz Sport logo" class="sponsors-image">
             <img src="assets/images/78220461_568912293683061_3788658559529517056_n-1024x724.png" loading="lazy" style="width: 177px;" alt="CADED logo" class="sponsors-image">
-            <img src="assets/images/logo_quer600.png" loading="lazy" style="width: 161px;" alt="Melasan Sport Logo"class="sponsors-image">
+            <img src="assets/images/logo_quer600.png" loading="lazy" style="width: 161px;" alt="Melasan Sport Logo" class="sponsors-image">
             <img src="assets/images/logo-rollerderbyhouse-281x300.jpg" loading="lazy" style="width: 80px;" alt="Roller Derby House logo" class="sponsors-image">
             <img src="assets/images/13627225_1039771119404353_4198934890741964873_n-300x300.png" loading="lazy" style="width: 82px;" alt="Sckr Pnch Skateshop logo" class="sponsors-image">
         </div>
-    </section>
+    </article>
     <!--END SPONSORS SECTION-->
 
     <!--VIDEO SECTION-->
-    <section class="hero-video-section container">
+    <aside class="hero-video-section container">
         <!--Video downloaded from public account https://www.youtube.com/watch?v=GxNGJQeLDKg -->
         <!-- Ref: https://www.w3schools.com/html/html5_video.asp-->
         <section class="hero-video-wrapper">
@@ -87,7 +104,7 @@
                 <h3 class="hero-subheading video-title2">Contact us anytime for a trial day!</h3>
             </a>
         </header>
-    </section>
+    </aside>
     <!--END VIDEO CLASS-->
 
     <!--FOOTER SECTION-->
