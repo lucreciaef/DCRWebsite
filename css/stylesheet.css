@@ -29,10 +29,39 @@
     --font-subheaders: 'Open Sans', sans-serif;;
 }
 
+/*Gets enabled with accessibility button to increase contrast*/
+.--higher-contrast-mode {
+    --background-medium: #ffffff;
+    --white-almost: #f8f8f8;
+    --teal-very-light-color: #b4d9d2;
+    --teal-light-color: #21968a;
+    --teal-team-strong: #076c5f;
+    --teal-team-color1: #3ca494;
+    --teal-team-color: #5dad9d;
+    --teal-green-darker: #457a6f;
+    --bluish-teal-gradient: rgba(46, 157, 255, 0.22);
+    --teal-green-super-dark: #0a0808;
+    --bluish-teal-color: #9cc6e7;
+    --very-dark-gray-fonts: #141417;
+    --dark-gray-selected: #1e2121;
+    --dark-gray-fonts: #000000;
+    --dark-gray-footer: #28282c;
+    --nav-font-color-inactive: #808088;
+    --nav-font-color-current: #ffffff;
+    --nav-font-color-hover: #b8f3e6;
+}
+
+.--readable-fonts-mode {
+    --font-header: Arial, bold;
+    letter-spacing: 0;
+    --font-body-content: Arial, serif;
+    --font-subheaders: Arial, serif;
+}
+
 body {
     background-color: var(--background-medium);
     font-family: var(--font-subheaders);
-    color: #6a859c;
+    color: var(--very-dark-gray-fonts);
     font-size: 16px;
     line-height: 20px;
     margin: 0;
@@ -144,7 +173,6 @@ a {
 }
 
 .container {
-    /*width: 100%;*/
     max-width: 940px;
     margin-right: auto;
     margin-left: auto;
@@ -160,14 +188,11 @@ a {
 
 .nav-bar-section {
     position: relative;
-    /*padding: 0px;*/
     height: 100px;
 }
 
 .nav-bar-links {
     padding-top: 50px;
-    /*padding-right: 20px;*/
-    /*padding-left: 30px;*/
     float: right;
 }
 
@@ -203,28 +228,58 @@ a {
     display:none;
 }
 
-/*Added some padding so the page content doesn't scroll down if open in small window*/
-/*.nav-bar-section + section {*/
-/*    padding-top: 120px;*/
+/*--------------------------------------------------------------------------------*/
+/*------ACCESSIBILITY TOOLS STYLING-----------------------------------------------*/
+/*--------------------------------------------------------------------------------*/
+
+.accessibility-options {
+    z-index: 50;
+    position: fixed;
+    top: 10em;
+    background: var(--dark-gray-selected);
+    cursor: pointer;
+    padding: 20px 5px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.accessibility-options section {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/*.all-acc-options {*/
+/*    z-index: 50;*/
+/*    background: var(--dark-gray-selected);*/
+/*    font-size: 25px;*/
+/*    cursor: pointer;*/
+/*    padding: 20px 5px;*/
+/*    border-bottom-right-radius: 5px;*/
 /*}*/
 
-/*.sticky-nav-bar {*/
-/*    z-index: 10;*/
-/*    position: fixed;*/
-/*    top: 0;*/
-/*    width: 100%;*/
-/*}*/
+.accessibility-menu i {
+    color: white;
+}
 
-/*Selects the first section that comes after the .sticky-nav-bar class*/
-/*Higher padding for home hero*/
-/*.sticky-nav-bar + section.home {*/
-/*    padding-top: 350px;*/
-/*}*/
+.all-acc-options i {
+    color: var(--teal-very-light-color);
+}
 
-/*General smaller hero for other pages*/
-/*.sticky-nav-bar + section.hero {*/
-/*    padding-top: 250px;*/
-/*}*/
+.accessibility-menu.expand-accessibility {
+    font-size: 30px;
+}
+
+.all-acc-options section {
+    font-size: 25px;
+}
+
+.accessibility-options .accessibility-menu .all-acc-options a:hover {
+    background: var(--bluish-teal-color);
+}
+
+.accessibility-options .accessibility-menu .expand-accessibility:hover {
+    background-color: var(--bluish-teal-color);
+}
 
 /*--------------------------------------------------------------------------------*/
 /*------HERO BANNERS STYLING------------------------------------------------------*/
@@ -244,7 +299,7 @@ a {
 
 .hero-heading {
     margin-bottom: 30px;
-    font-family: Oswald, sans-serif;
+    font-family: var(--font-header);
     color: var(--white-almost);
     font-size: 60px;
     line-height: 60px;
@@ -778,10 +833,6 @@ a {
 /*--------------------------------------------------------------------------------*/
 /*------CONTACT US PAGE STYLING----------------------------------------------------*/
 /*--------------------------------------------------------------------------------*/
-
-/*.sticky-nav-bar + article {*/
-/*    padding-top: 100px;*/
-/*}*/
 
 .contact-page-background {
     padding-top: 100px;

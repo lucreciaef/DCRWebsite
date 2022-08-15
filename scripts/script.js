@@ -1,6 +1,6 @@
-//------------------------------------------------------------------------------------------------
-//----RESPONSIVENESS
-//------------------------------------------------------------------------------------------------
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//----RESPONSIVENESS-+-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // Horizontal resizing - Ref: https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
 function clickOnMenuButton() {
@@ -12,26 +12,9 @@ function clickOnMenuButton() {
 	}
 }
 
-//Sticky navigation bar when scrolling down - Ref: https://www.w3schools.com/howto/howto_js_navbar_sticky.asp
-// When the user scrolls the page, execute addStickyClassToNavBar
-window.onscroll = function() {addStickyClassToNavBar()};
-// Get the navbar
-let navbar = document.getElementById("nav-header-id");
-// Get the offset position of the navbar
-let sticky = navbar.offsetTop;
-
-// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function addStickyClassToNavBar() {
-	if (window.pageYOffset >= sticky) { //pageYOffset is deprecated, scrollY is interchangeable(?)
-		navbar.classList.add("sticky-nav-bar");
-	} else {
-		navbar.classList.remove("sticky-nav-bar");
-	}
-}
-
-//------------------------------------------------------------------------------------------------
-//----FUNCTIONALITIES
-//------------------------------------------------------------------------------------------------
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//----FUNCTIONALITIES--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // Making FAQ question banners in accordion style.
 // Inspiration and Ref: https://dev.to/w3tsa/best-way-to-build-an-accordion-faq-in-html-css-and-js-54a6
@@ -62,7 +45,10 @@ for (const faqQuestionBannerElement of faqQuestionBanners) {
 	})
 }
 
+//---------------------------------------------------------------------------------
 // Expanding and collapsing article text in the Events page.
+//---------------------------------------------------------------------------------
+
 // Ref: https://www.w3schools.com/howto/howto_js_read_more.asp
 // Help from: https://stackoverflow.com/questions/29614210/storing-document-getelementbyid-in-a-variable
 // Help from: https://developer.mozilla.org/en-US/docs/Web/CSS/:scope
@@ -87,16 +73,53 @@ function clickToReadMore(element) { //Passing current clicked button as element
 	}
 }
 
-// Adding alert boxes to let the user know that the email was sent
-// Only to show as a demo, as the "Send Email" functionality won't work without a server
+//---------------------------------------------------------------------------------
+// Functionality for the accessibility menu on the left side of each page
+//---------------------------------------------------------------------------------
 
-// function clickToSendEmail() {
-// 	let emailSentAlert = document.getElementById("#form-done");
-// 	console.log(emailSentAlert);
-//
-// 	if (emailSentAlert.style.display === "none") {
-// 		emailSentAlert.style.display = "block";
-// 	} else {
-// 		emailSentAlert.style.display = "none";
-// 	}
-// }
+// Ref & Help: https://www.w3schools.com/jquery/jquery_selectors.asp
+// Ref: https://api.jquery.com/slideToggle/
+
+$(document).ready(function () {
+	// Enable the dropdown menu to appear
+	$(".expand-accessibility").click(function () {
+		// Smoothly open and close dropdown menu when the wheelchair icon is clicked
+		$(this).next(".all-acc-options").slideToggle(300);
+	})
+});
+
+// Make all colors shades of grey
+$("#contrast-option").eq(0).click(function () {
+
+	// Created custom set of colors to overwrite :root when the high contrast mode is enabled in accessibility
+	if (!document.body.classList.contains("--higher-contrast-mode")) {
+		document.body.classList.add("--higher-contrast-mode");
+	}
+	// Revert to the high contrast default mode
+	else {
+		document.body.classList.remove("--higher-contrast-mode");
+	}
+})
+
+// Apply a different font to improve readability
+$("#font-option").eq(0).click(function () {
+	// Change all text font to a standard font that is more readable
+	$("body").toggleClass("--readable-fonts-mode");
+})
+
+
+//---------------------------------------------------------------------------------------
+/* Settings to prevent the window from scrolling up every time an accessibility option is clicked*/
+//---------------------------------------------------------------------------------------
+
+// Get the button items from the DOM
+const accessibilityButtons = document.querySelectorAll(".acc-option");
+
+// Remove the default behavior for each accessibility button
+accessibilityButtons.forEach((button) => {
+
+	// Removing default behavior to scroll back to top of the page
+	button.addEventListener("click", (event) => {
+		event.preventDefault();
+	});
+});
