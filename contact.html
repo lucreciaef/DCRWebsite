@@ -22,123 +22,112 @@
 </head>
 <body>
 
-<!--HEADER SECTION-->
-<header class="nav-header" aria-label="navigation menu" role="banner" id="nav-header-id" >
-    <section class="container nav-bar-section" id="nav-bar-id">
-        <a href="index.html"><img src="assets/images/dcr_schrift_white.png" loading="lazy" alt="" sizes="120px" class="nav-bar-image"></a>
-        <nav role="navigation" class="nav-bar-links" id="nav-menu-id">
-            <a href="index.html" aria-current="page" class="navigation-link">Home</a>
-            <a href="about.html" class="navigation-link">About</a>
-            <a href="members.html" class="navigation-link">Members</a>
-            <a href="events.html" class="navigation-link">Events</a>
-            <a href="contact.html" class="navigation-link --current">Contact</a>
-            <a href="javascript:void(0);" class="menu-icon" onclick="clickOnMenuButton()">
-                <i class="fa fa-bars"></i>
-            </a>
-        </nav>
-    </section>
-</header>
-<!--END HEADER SECTION-->
-
-<!--CONTACT FORM-->
-<article class="contact-page-background">
-    <section class="contact-page-wrapper container" aria-label="Contact form">
-
-        <h2 class="section-heading">Contact Us!</h2>
-        <img src="assets/images/dcr_galerie5-min-735x240.jpg" loading="lazy" alt="Support your local Roller Derby team" class="contact-banner">
-        <h3 class="section-subheading">We are always open for new skaters and officials</h3>
-        <p class="contact-us-text">Are you interested in joining our team? Do you want to give it a try?<br>Are you an official in another team and you would like to collaborate with us?<br>Are you looking for sponsoring opportunities with us? <br>Send us an email by completing the form below!</p>
-
-        <section class="contact-form-wrapper">
-            <form class="form-fields-wrapper">
-                <label for="Name" class="label-id">Your name</label>
-                    <input type="text" class="form-field" maxlength="256" placeholder="Enter your name..." id="Name" required="">
-                <label for="Email" class="label-id">Your Email address</label>
-                    <input type="email" class="form-field" maxlength="256" placeholder="Enter your email..." id="Email" required="">
-                <label for="Message-field" class="label-id">Your message</label>
-                    <textarea id="Message-field" placeholder="Enter your message here..." maxlength="5000" class="form-field text-area"></textarea>
-                    <input type="submit" value="Send Email" class="button send-email">
-            </form>
-
-<!--            &lt;!&ndash; Ref: https://www.w3schools.com/howto/howto_js_alert.asp&ndash;&gt;-->
-<!--            <div id="form-done" class="alert form-done" style="display: none">-->
-<!--                <span class="close-btn" onclick="this.parentElement.style.display='none';">&times;</span>-->
-<!--                Thank you! Your submission has been received!-->
-<!--            </div>-->
-<!--            <div id="form-fail" class="alert form-fail" style="display: none">-->
-<!--                <span class="close-btn" onclick="this.parentElement.style.display='none';">&times;</span>-->
-<!--                Oops! Something went wrong while submitting the form :(-->
-<!--            </div>-->
+    <!--HEADER SECTION-->
+    <header class="nav-header" aria-label="navigation menu" role="banner" id="nav-header-id">
+        <section class="container nav-bar-section" id="nav-bar-id">
+            <a href="index.html"><img src="assets/images/dcr_schrift_white.png" loading="lazy" alt="Dust City Rollers" class="nav-bar-image"></a>
+            <nav role="navigation" class="nav-bar-links" id="nav-menu-id">
+                <a href="index.html" aria-current="page" class="navigation-link">Home</a>
+                <a href="about.html" class="navigation-link">About</a>
+                <a href="members.html" class="navigation-link">Members</a>
+                <a href="events.html" class="navigation-link">Events</a>
+                <a href="contact.html" class="navigation-link --current">Contact</a>
+                <a href="javascript:void(0);" class="menu-icon" onclick="clickOnMenuButton()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </nav>
         </section>
-        <img class="contact-bottom-img" src="assets/images/dcr_galerie3-min-360x240.jpg" loading="lazy" alt="Since 2016">
-    </section>
-</article>
-<!--END CONTACT FORM-->
+    </header>
+    <!--END HEADER SECTION-->
 
-<!--MAP SECTION-->
-<article class="contact-us-map">
-    <h2 class="section-heading">Where to find us</h2>
-    <h3 class="section-subheading">Gaussgasse 3, 8020 Graz</h3>
-    <!-- Embedded Google Maps with the team location (general location)-->
-    <div class="map" id="training-location">
-        <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21740.158319092334!2d15.442519772452886!3d47.069269615757406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476e4a886a45c873%3A0xd5b463571d117178!2sSankt%20Leonhard%2C%20Graz!5e0!3m2!1sen!2sat!4v1660549803955!5m2!1sen!2sat"
-                style="border:0;" allowfullscreen="" loading="lazy">
-        </iframe>
-    </div>
-</article>
-<!--END MAP SECTION-->
+    <!--CONTACT FORM-->
+    <article class="contact-page-background">
+        <section class="contact-page-wrapper container" aria-label="Contact form">
 
-<!--FOOTER SECTION-->
-<footer class="footer">
-    <section class="container footer-section">
-        <div class="footer-upper-block">
-            <a href="index.html" class="footer-logo">
-                <img src="assets/images/dcr_schrift_white.png" style="width: 180px;" loading="lazy" alt="Team Logo">
-            </a>
-            <div class="footer-links-wrapper">
-                <div class="footer-block">
-                    <div class="footer-title">About us</div>
-                    <a href="#" class="footer-link">Who are we</a>
-                    <a href="#" class="footer-link">What is Roller Derby</a>
-                    <a href="#" class="footer-link">Members</a>
-                </div>
-                <div class="footer-block">
-                    <div class="footer-title">More Info</div>
-                    <a href="#" class="footer-link">WFTDA</a>
-                    <a href="#" class="footer-link">FAQ</a>
-                    <a href="#" class="footer-link">Impressum</a>
-                </div>
-            </div>
+            <h2 class="section-heading">Contact Us!</h2>
+            <img src="assets/images/dcr_galerie5-min-735x240.jpg" loading="lazy" alt="Support your local Roller Derby team" class="contact-banner">
+            <h3 class="section-subheading">We are always open for new skaters and officials</h3>
+            <p class="contact-us-text">Are you interested in joining our team? Do you want to give it a try?<br>Are you an official in another team and you would like to collaborate with us?<br>Are you looking for sponsoring opportunities with us? <br>Send us an email by completing the form below!</p>
+
+            <section class="contact-form-wrapper">
+                <form class="form-fields-wrapper">
+                    <label for="Name" class="label-id">Your name</label>
+                        <input type="text" class="form-field" maxlength="256" placeholder="Enter your name..." id="Name" required="">
+                    <label for="Email" class="label-id">Your Email address</label>
+                        <input type="email" class="form-field" maxlength="256" placeholder="Enter your email..." id="Email" required="">
+                    <label for="Message-field" class="label-id">Your message</label>
+                        <textarea id="Message-field" placeholder="Enter your message here..." maxlength="5000" class="form-field text-area"></textarea>
+                        <input type="submit" value="Send Email" class="button send-email">
+                </form>
+            </section>
+            <img class="contact-bottom-img" src="assets/images/dcr_galerie3-min-360x240.jpg" loading="lazy" alt="Since 2016">
+        </section>
+    </article>
+    <!--END CONTACT FORM-->
+
+    <!--MAP SECTION-->
+    <article class="contact-us-map">
+        <h2 class="section-heading">Where to find us</h2>
+        <h3 class="section-subheading">Gaussgasse 3, 8020 Graz</h3>
+        <!-- Embedded Google Maps with the team location (general location)-->
+        <div class="map" id="training-location">
+            <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21740.158319092334!2d15.442519772452886!3d47.069269615757406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476e4a886a45c873%3A0xd5b463571d117178!2sSankt%20Leonhard%2C%20Graz!5e0!3m2!1sen!2sat!4v1660549803955!5m2!1sen!2sat"
+                    style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
         </div>
-        <!--                <div class="footer-form">-->
-        <!--                    <form id="footer-Form" name="footer-email-form" data-name="Footer Form" method="get" class="footer-form-container">-->
-        <!--                        <div class="footer-title">Subscribe</div>-->
-        <!--                        <div class="footer-form-block">
-                                <input type="email" class="footer-form-field w-input" maxlength="256" name="Footer-Email-2" data-name="Footer Email 2" aria-label="Get product updates" placeholder="Get all news about us via email!" id="Footer-Email-2" required="">
-                                <input type="submit" value="" data-wait="Please wait..." class="footer-form-submit w-button"></div>-->
-        <!--                    </form>-->
-        <!--                    <div class="form-done">-->
-        <!--                        <div>Thank you! Your submission has been received!</div>-->
-        <!--                    </div>-->
-        <!--                    <div class="form-fail">-->
-        <!--                        <div>Oops! Something went wrong while submitting the form.</div>-->
-        <!--                    </div>-->
-        <!--                </div>-->
-        <div class="footer-divider"></div>
-        <div class="footer-bottom">
-            <div class="footer-copyright">© 2022 Derby Love</div>
-            <div class="footer-bottom-left">
-                <a href="#" class="footer-link-two">PRIVACY POLICY</a>
-                <div class="footer-social-block">
-                    <a href="#" class="footer-social-link"><img src="assets/images/social-08-white.svg" loading="lazy" width="30" alt="Instagram account" class="social-media-icon" id="instagram-icon"></a>
-                    <a href="#" class="footer-social-link"><img src="assets/images/social-02-white.svg" loading="lazy" width="30" alt="Facebook account" class="social-media-icon" id="facebook-icon"></a>
-                    <a href="#" class="footer-social-link"><img src="assets/images/social-30.svg" loading="lazy" width="30" alt="Email contact" class="social-media-icon" id="email-icon"></a>
+    </article>
+    <!--END MAP SECTION-->
+
+    <!--FOOTER SECTION-->
+    <footer class="footer">
+        <section class="container footer-section">
+            <section class="footer-upper-block">
+                <div class="footer-logo">
+                    <a href="index.html">
+                        <img src="assets/images/dcr_schrift_white.png" style="width: 180px;" loading="lazy" alt="Team Logo">
+                    </a>
                 </div>
-            </div>
-        </div>
-    </section>
-</footer>
-<!--END FOOTER SECTION-->
+                <div class="footer-links-wrapper">
+
+                    <div class="footer-block">
+                        <div class="footer-title">About us</div>
+                        <a href="#" class="footer-link">Who are we</a>
+                        <a href="#" class="footer-link">What is Roller Derby</a>
+                        <a href="#" class="footer-link">Members</a>
+                    </div>
+
+                    <div class="footer-block">
+                        <div class="footer-title">More Info</div>
+                        <a href="#" class="footer-link">WFTDA</a>
+                        <a href="#" class="footer-link">FAQ</a>
+                        <a href="#" class="footer-link">Impressum</a>
+                    </div>
+                </div>
+
+                <div class="footer-form footer-block">
+                    <div class="footer-title">Subscribe</div>
+                    <form class="footer-form-container">
+                        <div class="footer-form-block">
+                            <input type="email" class="footer-form-field" maxlength="256" aria-label="Get updates from the team" placeholder="Get news about DCR via email!" required="">
+                            <input type="submit" value="" class="footer-form-submit fa fa-arrow-right"></div>
+                    </form>
+                </div>
+            </section>
+            <div class="footer-divider"></div>
+            <section class="footer-bottom">
+                <div class="footer-copyright">© 2022 Derby Love</div>
+                <div class="footer-bottom-left">
+                    <a href="#" class="footer-link-two">PRIVACY POLICY</a>
+                    <div class="footer-social-block">
+                        <a href="#" class="footer-social-link"><img src="assets/images/social-08-white.svg" loading="lazy" width="30" alt="" class="social-media-icon" id="instagram-icon"></a>
+                        <a href="#" class="footer-social-link"><img src="assets/images/social-02-white.svg" loading="lazy" width="30" alt="" class="social-media-icon" id="facebook-icon"></a>
+                        <a href="#" class="footer-social-link"><img src="assets/images/social-30.svg" loading="lazy" width="30" alt="Email contact" class="social-media-icon" id="email-icon"></a>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </footer>
+    <!--END FOOTER SECTION-->
 </body>
 </html>

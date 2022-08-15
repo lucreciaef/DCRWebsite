@@ -70,34 +70,6 @@ h3 {
     text-transform: uppercase;
 }
 
-/*h4 {*/
-/*    margin-top: 0;*/
-/*    margin-bottom: 10px;*/
-/*    font-size: 18px;*/
-/*    line-height: 24px;*/
-/*    font-weight: 700;*/
-/*    text-transform: uppercase;*/
-/*}*/
-
-/*h5 {*/
-/*    margin-top: 0;*/
-/*    margin-bottom: 20px;*/
-/*    color: var(--dark-gray-fonts);*/
-/*    font-size: 18px;*/
-/*    line-height: 20px;*/
-/*    font-weight: 300;*/
-/*    letter-spacing: 4px;*/
-/*    text-transform: uppercase;*/
-/*}*/
-
-/*h6 {*/
-/*    margin-top: 0;*/
-/*    margin-bottom: 10px;*/
-/*    font-size: 12px;*/
-/*    line-height: 18px;*/
-/*    font-weight: 700;*/
-/*}*/
-
 p {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -165,6 +137,10 @@ a {
     font-family: var(--font-header);
     /*color: #405c54;*/
     width: 100%;
+    /*z-index: 10;*/
+    position: fixed;
+    top: 0;
+    /*width: 100%;*/
 }
 
 .container {
@@ -213,7 +189,6 @@ a {
 }
 
 .navigation-link.--current {
-    /*margin-top: 10px;*/
     font-family: var(--font-header);
     color: var(--nav-font-color-current);
     font-size: 20px;
@@ -229,33 +204,34 @@ a {
 }
 
 /*Added some padding so the page content doesn't scroll down if open in small window*/
-.nav-bar-section + section {
-    padding-top: 120px;
-}
+/*.nav-bar-section + section {*/
+/*    padding-top: 120px;*/
+/*}*/
 
-.sticky-nav-bar {
-    z-index: 10;
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
+/*.sticky-nav-bar {*/
+/*    z-index: 10;*/
+/*    position: fixed;*/
+/*    top: 0;*/
+/*    width: 100%;*/
+/*}*/
 
 /*Selects the first section that comes after the .sticky-nav-bar class*/
 /*Higher padding for home hero*/
-.sticky-nav-bar + section.home {
-    padding-top: 350px;
-}
+/*.sticky-nav-bar + section.home {*/
+/*    padding-top: 350px;*/
+/*}*/
 
 /*General smaller hero for other pages*/
-.sticky-nav-bar + section.hero {
-    padding-top: 250px;
-}
+/*.sticky-nav-bar + section.hero {*/
+/*    padding-top: 250px;*/
+/*}*/
 
 /*--------------------------------------------------------------------------------*/
 /*------HERO BANNERS STYLING------------------------------------------------------*/
 /*--------------------------------------------------------------------------------*/
 
 .home-hero-section{
+    margin-top: 100px;
     padding-top: 250px;
     padding-bottom: 250px;
     background-image: linear-gradient(180deg, var(--teal-light-color), var(--bluish-teal-gradient)), url('../assets/images/dcr_Footer.jpg');
@@ -292,6 +268,7 @@ a {
 }
 
 .hero-section {
+    margin-top: 100px;
     padding-top: 140px;
     padding-bottom: 140px;
     background-position: 0 0, 40%;
@@ -474,6 +451,10 @@ a {
     justify-content: flex-start;
     align-items: flex-start;
     transition: 0.5s;
+}
+
+.article-image {
+    max-width: 100%;
 }
 
 /*FAQ SECTION---------------------------------------------------------------------*/
@@ -798,11 +779,12 @@ a {
 /*------CONTACT US PAGE STYLING----------------------------------------------------*/
 /*--------------------------------------------------------------------------------*/
 
-.sticky-nav-bar + article {
-    padding-top: 100px;
-}
+/*.sticky-nav-bar + article {*/
+/*    padding-top: 100px;*/
+/*}*/
 
 .contact-page-background {
+    padding-top: 100px;
     background-image: linear-gradient(180deg, black, var(--teal-team-color));
 }
 
@@ -846,6 +828,7 @@ a {
     text-align: center;
     letter-spacing: 3px;
     text-transform: uppercase;
+    padding-bottom: 30px;
 }
 
 .contact-us-text {
@@ -947,16 +930,15 @@ a {
     background-color: var(--dark-gray-footer);
 }
 
-.logo-wrapper {
-    max-width: 180px;
-    max-height: 180px;
-    padding-bottom: 30px;
-    padding-left: 30px;
+.footer-logo {
+    align-self: center;
 }
 
 .footer-upper-block {
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
 }
 
 .footer-links-wrapper {
@@ -974,12 +956,10 @@ a {
 }
 
 .footer-block {
-    /*justify-content: space-around;*/
     padding-left: 50px;
     display: flex;
     position: relative;
     flex-direction: column;
-    /*justify-content: flex-start;*/
     align-items: flex-start;
 }
 
@@ -1023,6 +1003,57 @@ a {
     color: var(--teal-light-color);
 }
 
+/*Subscribe form---------------------------------------------*/
+
+.footer-form {
+    margin-top: 40px;
+    flex-direction: column;
+}
+
+.footer-form-block {
+    display: flex;
+    width: fit-content;
+    flex-wrap: nowrap;
+    margin-top: 25px;
+    justify-content: flex-start;
+}
+
+.footer-form-field {
+    height: 20px;
+    width: 160px;
+    padding: 12px 16px;
+    border-style: solid;
+    border-width: 1px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    transition: all 200ms ease;
+    font-size: 14px;
+    line-height: 22px;
+    font-family: var(--font-header);
+}
+
+.footer-form-submit {
+    width: 46px;
+    height: 46px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background-color: var(--teal-team-strong);
+    border-color: var(--teal-team-strong);
+    background-image: url('../assets/images/arrow-go.svg');
+    background-position: 50% 50%;
+    background-size: auto;
+    background-repeat: no-repeat;
+    transition: all 200ms ease;
+    cursor: pointer;
+    border-style: none;
+}
+
+.footer-form-submit:hover {
+    background-color: var(--teal-light-color);
+    border-color: var(--very-dark-gray-fonts);
+}
+
+/*Dividing line*/
 .footer-divider {
     position: relative;
     display: block;
@@ -1031,9 +1062,9 @@ a {
     margin-top: 40px;
     margin-bottom: 40px;
     background-color: var(--white-almost);
-    box-sizing: border-box;
 }
 
+/*Bottom section of the footer*/
 .footer-bottom {
     display: flex;
     justify-content: space-between;
@@ -1055,6 +1086,7 @@ a {
     margin-left: 12px;
 }
 
+/*Img found was black and here I needed it to be white*/
 #email-icon {
     filter: invert(100%);
 }
@@ -1385,6 +1417,10 @@ a {
 
     /*------FOOTER STYLING--------------------------------------------------------*/
 
+    .footer-form {
+        width: 100%;
+    }
+
 }
 
 @media screen and (max-width: 600px) {
@@ -1460,6 +1496,10 @@ a {
 
     /*---FOOTER-----------------------------------------------------------------*/
 
+    .footer-logo {
+        padding-left: 50px;
+        padding-bottom: 30px;
+    }
     .footer-upper-block {
         display: inline-block;
     }
