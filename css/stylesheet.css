@@ -798,8 +798,8 @@ a {
 /*------CONTACT US PAGE STYLING----------------------------------------------------*/
 /*--------------------------------------------------------------------------------*/
 
-.sticky-nav-bar + section {
-    padding-top: 50px;
+.sticky-nav-bar + article {
+    padding-top: 100px;
 }
 
 .contact-page-background {
@@ -819,7 +819,7 @@ a {
 }
 
 .section-heading {
-    margin-top: 100px;
+    padding-top: 50px;
     margin-bottom: 16px;
     font-family: var(--font-header);
     color: var(--teal-team-color1);
@@ -903,32 +903,41 @@ a {
     padding-bottom: 30px;
 }
 
-/* The alert message box */
-.alert {
-    padding: 20px;
-    background-color: #f44336; /* Red */
-    color: white;
-    margin-bottom: 15px;
+/*!* The alert message box *!*/
+/*.alert {*/
+/*    padding: 20px;*/
+/*    background-color: #f44336; !* Red *!*/
+/*    color: white;*/
+/*    margin-bottom: 15px;*/
+/*}*/
+
+/*!* The close button *!*/
+/*.close-btn {*/
+/*    margin-left: 15px;*/
+/*    color: white;*/
+/*    font-weight: bold;*/
+/*    float: right;*/
+/*    font-size: 22px;*/
+/*    line-height: 20px;*/
+/*    cursor: pointer;*/
+/*    transition: 0.3s;*/
+/*}*/
+
+/*!* When moving the mouse over the close button *!*/
+/*.close-btn:hover {*/
+/*    color: black;*/
+/*}*/
+
+.contact-us-map {
+    background-image: linear-gradient(180deg, black, var(--teal-team-color));
 }
 
-/* The close button */
-.close-btn {
-    margin-left: 15px;
-    color: white;
-    font-weight: bold;
-    float: right;
-    font-size: 22px;
-    line-height: 20px;
-    cursor: pointer;
-    transition: 0.3s;
+/*Making map iframe wide to full screen*/
+.map iframe {
+    width: 100%;
+    height: 60vh;
+    min-width: 26em;
 }
-
-/* When moving the mouse over the close button */
-.close-btn:hover {
-    color: black;
-}
-
-
 
 /*--------------------------------------------------------------------------------*/
 /*------FOOTER SECTION STYLING----------------------------------------------------*/
