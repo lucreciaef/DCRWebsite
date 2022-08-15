@@ -52,10 +52,10 @@
 }
 
 .--readable-fonts-mode {
-    --font-header: Arial, bold;
+    --font-header: Tahoma, serif;
     letter-spacing: 0;
     --font-body-content: Arial, serif;
-    --font-subheaders: Arial, serif;
+    --font-subheaders: Tahoma, serif;
 }
 
 body {
@@ -1178,6 +1178,7 @@ a {
 
     /*------NAVIGATION BAR STYLING------------------------------------------------*/
     .nav-bar-section {
+        z-index: 100;
         background-color: #000000;
         width: 100%;
     }
@@ -1198,6 +1199,8 @@ a {
     .nav-bar-links a {display: none;}
 
     .nav-bar-links.responsive {
+        justify-items: center;
+        z-index: 100;
         width: 100%;
         padding-bottom: 30px;
         margin-top: -50px;
@@ -1208,6 +1211,7 @@ a {
     .nav-bar-links.responsive .navigation-link {
         position: relative;
         padding-top: 30px;
+        padding-left: 50px;
         padding-bottom: 0;
         transition: 0.5s;
     }
