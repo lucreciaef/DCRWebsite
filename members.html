@@ -8,7 +8,9 @@
     <meta name="description" content="Meet the Dust City Rollers team!">
     <meta name="keywords" content="roller derby, sport, austria, graz, dust city rollers">
     <link rel="stylesheet" href="css/stylesheet.css">
+    <!--Font Awesome library to use icons, such as sandwich icon for responsive navbar-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--jQuery used for the accessibility options tab on each page-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--Defer keyword ensures that DOM is loaded completely before running JS script-->
     <script src="scripts/script.js" defer></script>
@@ -17,7 +19,8 @@
     <script type="text/javascript">
 		WebFont.load({
 			google: {
-				families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic","Oswald:200,300,400,500,600,700","Roboto:300,regular,500"]
+				families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic",
+                    "Oswald:200,300,400,500,600,700","Roboto:300,regular,500"]
 			}
 		});</script>
 </head>
@@ -26,14 +29,17 @@
     <!--HEADER SECTION-->
     <header class="nav-header" aria-label="navigation menu" role="banner" id="nav-header-id">
         <section class="container nav-bar-section" id="nav-bar-id">
-            <a href="index.html"><img src="assets/images/dcr_schrift_white.png" loading="lazy" alt="Dust City Rollers" class="nav-bar-image"></a>
+            <a href="index.html">
+                <img src="assets/images/dcr_schrift_white.png" loading="lazy" alt="Dust City Rollers" class="nav-bar-image"></a>
             <nav role="navigation" class="nav-bar-links" id="nav-menu-id">
                 <a href="index.html" aria-current="page" class="navigation-link">Home</a>
                 <a href="about.html" class="navigation-link">About</a>
                 <a href="members.html" class="navigation-link --current">Members</a>
                 <a href="events.html" class="navigation-link">Events</a>
                 <a href="contact.html" class="navigation-link">Contact</a>
+                <!--Clicking on the menu triggers a swap in css classes, to create a responsive navbar. References in script.js-->
                 <a href="javascript:void(0);" class="menu-icon" onclick="clickOnMenuButton()">
+                    <!--Sandwich button for navbar-->
                     <i class="fa fa-bars"></i>
                 </a>
             </nav>
@@ -50,25 +56,31 @@
     </section>
     <!--END HERO BANNER-->
 
-    <!--    ACCESSIBILITY TOOLS-->
+    <!--ACCESSIBILITY TOOLS-->
     <aside class="accessibility-options">
         <section class="accessibility-menu expand-accessibility" title="Accessibility Options">
+            <!--Main tab that can be expanded when clicked-->
             <a href="#"><i class="fa fa-wheelchair"></i></a>
         </section>
+        <!--All hidden options that can be seen after clicking-->
         <section class="all-acc-options" style="display: none;">
+            <!--Option to improve the contrast, since the website style has many pastel colors-->
             <section id="contrast-option" class="acc-option" title="Increase Contrast">
                 <a href="#"><i class="fa fa-sliders"></i></a>
             </section>
+            <!--Option to apply a more readable font (although not so stylish) as the default one is very narrow-->
             <section id="font-option" class="acc-option" title="Readable Font">
                 <a href="#"><i class="fa fa-font"></i></a>
             </section>
         </section>
     </aside>
-    <!--    END ACCESSIBILITY TOOLS-->
+    <!--END ACCESSIBILITY TOOLS-->
 
     <!--MEMBERS PICTURES SECTION-->
+    <!--First section of team pictures - Skaters-->
     <section class="team-circles container">
         <h1 class="content-heading">Skaters</h1>
+    <!--Container for all cards within a grid-->
         <section class="team-grid">
             <div class="team-card-wrapper">
                 <div class="team-card --front">
@@ -297,8 +309,10 @@
             </div>
         </section>
     </section>
+    <!--Second section of team pictures - Officials-->
     <section class="team-circles container">
         <h1 class="content-heading">Officials</h1>
+    <!--Container for all cards within a grid-->
         <div class="team-grid">
             <div class="team-card-wrapper">
                 <div class="team-card --front">
@@ -365,12 +379,14 @@
     <!--END MEMBERS PICTURES SECTION-->
 
     <!--ASIDE PICTURE-->
+    <!--Simple banner that gets resized based on media queries in css-->
     <aside class="love-banner"></aside>
     <!--END ASIDE PICTURE-->
 
     <!--FOOTER SECTION-->
     <footer class="footer">
         <section class="container footer-section">
+            <!--Footer section above the dividing line-->
             <section class="footer-upper-block">
                 <div class="footer-logo">
                     <a href="index.html">
@@ -379,21 +395,23 @@
                 </div>
                 <div class="footer-links-wrapper">
 
+                    <!--First column of links-->
                     <div class="footer-block">
                         <div class="footer-title">About us</div>
-                        <a href="#" class="footer-link">Who are we</a>
-                        <a href="#" class="footer-link">What is Roller Derby</a>
-                        <a href="#" class="footer-link">Members</a>
+                        <a href="about.html" class="footer-link">Who are we</a>
+                        <a href="about.html" class="footer-link">What is Roller Derby</a>
+                        <a href="members.html" class="footer-link">Members</a>
                     </div>
-
+                    <!--Second column of links-->
                     <div class="footer-block">
                         <div class="footer-title">More Info</div>
-                        <a href="#" class="footer-link">WFTDA</a>
+                        <a href="https://wftda.com/" class="footer-link">WFTDA</a>
                         <a href="#" class="footer-link">FAQ</a>
                         <a href="#" class="footer-link">Impressum</a>
                     </div>
                 </div>
 
+                <!--Frontend for implementing a subscription functionality - it does not take any action as it is-->
                 <div class="footer-form footer-block">
                     <div class="footer-title">Subscribe</div>
                     <form class="footer-form-container">
@@ -403,6 +421,7 @@
                     </form>
                 </div>
             </section>
+            <!--Line to divide content-->
             <div class="footer-divider"></div>
             <section class="footer-bottom">
                 <div class="footer-copyright">© 2022 Derby Love</div>
