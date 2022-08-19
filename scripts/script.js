@@ -77,6 +77,7 @@ function clickToReadMore(element) { //Passing current clicked button as element
 // Functionality for the accessibility menu on the left side of each page
 //---------------------------------------------------------------------------------
 
+// Using a bit of jQuery for learning and practicing, although this functionality does not require it
 // Ref & Help: https://www.w3schools.com/jquery/jquery_selectors.asp
 // Ref: https://api.jquery.com/slideToggle/
 
@@ -88,37 +89,62 @@ $(document).ready(function () {
 	})
 });
 
+let userContrastPreferences = localStorage.getItem("contrastPreferences");
+let userFontPreferences = localStorage.getItem("fontPreferences");
+
 // Make all colors shades of grey
 $("#contrast-option").eq(0).click(function () {
 
 	// Created custom set of colors to overwrite :root when the high contrast mode is enabled in accessibility
 	if (!document.body.classList.contains("--higher-contrast-mode")) {
 		document.body.classList.add("--higher-contrast-mode");
+		localStorage.setItem("contrastPreferences","enabled");
 	}
 	// Revert to the high contrast default mode
 	else {
 		document.body.classList.remove("--higher-contrast-mode");
+		localStorage.setItem("contrastPreferences","disabled");
 	}
 })
 
+if (userContrastPreferences === "enabled") {
+	document.body.classList.add("--higher-contrast-mode");
+}
+
 // Apply a different font to improve readability
 $("#font-option").eq(0).click(function () {
+
 	// Change all text font to a standard font that is more readable
-	$("body").toggleClass("--readable-fonts-mode");
+	if (!document.body.classList.contains("--readable-fonts-mode")) {
+		document.body.classList.add("--readable-fonts-mode");
+		localStorage.setItem("fontPreferences","enabled");
+	} else {
+		document.body.classList.remove("--readable-fonts-mode");
+		localStorage.setItem("fontPreferences","disabled");
+	}
 })
 
+if (userFontPreferences === "enabled") {
+	document.body.classList.add("--readable-fonts-mode");
+}
 
-//---------------------------------------------------------------------------------------
-/* Settings to prevent the window from scrolling up every time an accessibility option is clicked*/
-//---------------------------------------------------------------------------------------
 
-// Get the button items from the DOM
+//------------------------------------------------------------------------------------------------
+// Settings to prevent the window from scrolling up every time an accessibility option is clicked
+//------------------------------------------------------------------------------------------------
+
+// Get the menu main button from the DOM
+const accessibilityMenu = document.querySelector(".accessibility-menu");
+// Get the buttons inside the menu from the DOM
 const accessibilityButtons = document.querySelectorAll(".acc-option");
 
-// Remove the default behavior for each accessibility button
-accessibilityButtons.forEach((button) => {
+// Removing default behavior to scroll back to top of the page, for the main menu button
+accessibilityMenu.addEventListener("click", (event) => {
+	event.preventDefault();
+})
 
-	// Removing default behavior to scroll back to top of the page
+// Removing default behavior to scroll back to top of the page, for each functionality button
+accessibilityButtons.forEach((button) => {
 	button.addEventListener("click", (event) => {
 		event.preventDefault();
 	});

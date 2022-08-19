@@ -8,7 +8,9 @@
     <meta name="description" content="Who are we, and what is Roller Derby">
     <meta name="keywords" content="roller derby, sport, austria, graz, dust city rollers">
     <link rel="stylesheet" href="css/stylesheet.css">
+    <!--Font Awesome library to use icons, such as sandwich icon for responsive navbar-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--jQuery used for the accessibility options tab on each page-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--Defer keyword ensures that DOM is loaded completely before running JS script-->
     <script src="scripts/script.js" defer></script>
@@ -17,7 +19,8 @@
     <script type="text/javascript">
 		WebFont.load({
 			google: {
-				families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic","Oswald:200,300,400,500,600,700","Roboto:300,regular,500"]
+				families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic",
+                    "Oswald:200,300,400,500,600,700","Roboto:300,regular,500"]
 			}
 		});</script>
 </head>
@@ -26,14 +29,17 @@
     <!--HEADER SECTION-->
     <header class="nav-header" aria-label="navigation menu" role="banner" id="nav-header-id">
         <section class="container nav-bar-section" id="nav-bar-id">
-            <a href="index.html"><img src="assets/images/dcr_schrift_white.png" loading="lazy" alt="Dust City Rollers" class="nav-bar-image"></a>
+            <a href="index.html">
+                <img src="assets/images/dcr_schrift_white.png" loading="lazy" alt="Dust City Rollers" class="nav-bar-image"></a>
             <nav role="navigation" class="nav-bar-links" id="nav-menu-id">
                 <a href="index.html" aria-current="page" class="navigation-link">Home</a>
                 <a href="about.html" class="navigation-link --current">About</a>
                 <a href="members.html" class="navigation-link">Members</a>
                 <a href="events.html" class="navigation-link">Events</a>
                 <a href="contact.html" class="navigation-link">Contact</a>
+                <!--Clicking on the menu triggers a swap in css classes, to create a responsive navbar. References in script.js-->
                 <a href="javascript:void(0);" class="menu-icon" onclick="clickOnMenuButton()">
+                    <!--Sandwich button for navbar-->
                     <i class="fa fa-bars"></i>
                 </a>
             </nav>
@@ -50,21 +56,25 @@
     </section>
     <!--END HERO BANNER-->
 
-    <!--    ACCESSIBILITY TOOLS-->
+    <!--ACCESSIBILITY TOOLS-->
     <aside class="accessibility-options">
         <section class="accessibility-menu expand-accessibility" title="Accessibility Options">
+            <!--Main tab that can be expanded when clicked-->
             <a href="#"><i class="fa fa-wheelchair"></i></a>
         </section>
+        <!--All hidden options that can be seen after clicking-->
         <section class="all-acc-options" style="display: none;">
+            <!--Option to improve the contrast, since the website style has many pastel colors-->
             <section id="contrast-option" class="acc-option" title="Increase Contrast">
                 <a href="#"><i class="fa fa-sliders"></i></a>
             </section>
+            <!--Option to apply a more readable font (although not so stylish) as the default one is very narrow-->
             <section id="font-option" class="acc-option" title="Readable Font">
                 <a href="#"><i class="fa fa-font"></i></a>
             </section>
         </section>
     </aside>
-    <!--    END ACCESSIBILITY TOOLS-->
+    <!--END ACCESSIBILITY TOOLS-->
 
     <!--PAGE CONTENT - TEXT/ARTICLE-->
     <article class="about-content">
@@ -94,11 +104,21 @@
                     principle. Every member can and should participate to keep the league running.
                 </p>
                 <div>
-                    <img class="DCR-logo-about" src="assets/images/dcr_logo_farbe_RGB_transparent_02-1024x985.png" loading="lazy" alt="DCR Logo">
+                    <picture>
+                        <!--Added webp images for better loading times and a jpg image as fallback if needed-->
+                        <!--Ref: https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images-->
+                        <source type="image/webp" srcset="assets/images/dcr_logo_farbe_RGB_transparent_02-1024x985.webp">
+                        <img class="DCR-logo-about" src="assets/images/dcr_logo_farbe_RGB_transparent_02-1024x985.png" loading="lazy" alt="DCR Logo">
+                    </picture>
                 </div>
             </section>
             <a href="contact.html" class="button-content">Contact us!</a>
+            <picture>
+                <!--Added webp images for better loading times and a jpg image as fallback if needed-->
+                <!--Ref: https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images-->
+                <source type="image/webp" srcset="assets/images/oem4team.webp">
                 <img class="about-image-1" src="assets/images/oem4team.jpeg" loading="lazy" alt="Team picture after 2022 Austrian Championships">
+            </picture>
         </section>
         <section class="about-content-section-2">
             <section class="section-wrapper container">
@@ -146,6 +166,7 @@
 
     <!--FAQ SECTION-->
     <article class="faq-section container">
+    <!--Created a sort of accordion-like design to display questions and answers. References in script.js-->
         <header class="faq-heading">
             <h2 class="content-heading secondary-header">
                 Dust City Rollers: FAQ
@@ -206,7 +227,9 @@
     <!--TESTIMONIALS SECTION-->
     <aside class="testimonials-aside container">
         <h2 class="content-heading secondary-header">Testimonials</h2>
+    <!--Main grid that contains the testimonial cards-->
         <section class="testimonials-grid">
+        <!--Individual Testimonial card-->
             <section id="testimonial-card-1" class="testimonial-card">
                 <p class="testimonial-text">“Roller Derby is the best sport in the world. It's always exciting to play with our team!”<br><br></p>
                 <section class="testimonial-info-box">
@@ -217,6 +240,7 @@
                     </div>
                 </section>
             </section>
+        <!--Individual Testimonial card-->
             <section id="testimonial-card-2" class="testimonial-card">
                 <p class="testimonial-text">“Whenever you're feeling down, the team is there to support you. We practice every weekend and I'm so happy to be here.”<br></p>
                 <section class="testimonial-info-box">
@@ -227,6 +251,7 @@
                     </div>
                 </section>
             </section>
+        <!--Individual Testimonial card-->
             <section id="testimonial-card-3" class="testimonial-card">
                 <p class="testimonial-text">“It's never boring to play derby! Not only fun but also a personal challenge to improve my fitness.”<br></p>
                 <section class="testimonial-info-box">
@@ -244,6 +269,7 @@
     <!--FOOTER SECTION-->
     <footer class="footer">
         <section class="container footer-section">
+            <!--Footer section above the dividing line-->
             <section class="footer-upper-block">
                 <div class="footer-logo">
                     <a href="index.html">
@@ -252,23 +278,25 @@
                 </div>
                 <div class="footer-links-wrapper">
 
+                    <!--First column of links-->
                     <div class="footer-block">
                         <div class="footer-title">About us</div>
-                        <a href="#" class="footer-link">Who are we</a>
-                        <a href="#" class="footer-link">What is Roller Derby</a>
-                        <a href="#" class="footer-link">Members</a>
+                        <a href="about.html" class="footer-link">Who are we</a>
+                        <a href="about.html" class="footer-link">What is Roller Derby</a>
+                        <a href="members.html" class="footer-link">Members</a>
                     </div>
-
+                    <!--Second column of links-->
                     <div class="footer-block">
                         <div class="footer-title">More Info</div>
-                        <a href="#" class="footer-link">WFTDA</a>
+                        <a href="https://wftda.com/" class="footer-link">WFTDA</a>
                         <a href="#" class="footer-link">FAQ</a>
                         <a href="#" class="footer-link">Impressum</a>
                     </div>
                 </div>
 
+                <!--Frontend for implementing a subscription functionality - it does not take any action as it is-->
                 <div class="footer-form footer-block">
-                        <div class="footer-title">Subscribe</div>
+                    <div class="footer-title">Subscribe</div>
                     <form class="footer-form-container">
                         <div class="footer-form-block">
                             <input type="email" class="footer-form-field" maxlength="256" aria-label="Get updates from the team" placeholder="Get news about DCR via email!" required="">
@@ -276,6 +304,7 @@
                     </form>
                 </div>
             </section>
+            <!--Line to divide content-->
             <div class="footer-divider"></div>
             <section class="footer-bottom">
                 <div class="footer-copyright">© 2022 Derby Love</div>
@@ -291,5 +320,6 @@
         </section>
     </footer>
     <!--END FOOTER SECTION-->
+
 </body>
 </html>
