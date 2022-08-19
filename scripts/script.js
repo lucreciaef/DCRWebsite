@@ -89,6 +89,7 @@ $(document).ready(function () {
 	})
 });
 
+// Creating variables to save user session preferences
 let userContrastPreferences = localStorage.getItem("contrastPreferences");
 let userFontPreferences = localStorage.getItem("fontPreferences");
 
@@ -107,6 +108,7 @@ $("#contrast-option").eq(0).click(function () {
 	}
 })
 
+// Checking if the value is already saved in the session to keep the preferences enabled/disabled
 if (userContrastPreferences === "enabled") {
 	document.body.classList.add("--higher-contrast-mode");
 }
@@ -124,10 +126,10 @@ $("#font-option").eq(0).click(function () {
 	}
 })
 
+// Checking if the value is already saved in the session to keep the preferences enabled/disabled
 if (userFontPreferences === "enabled") {
 	document.body.classList.add("--readable-fonts-mode");
 }
-
 
 //------------------------------------------------------------------------------------------------
 // Settings to prevent the window from scrolling up every time an accessibility option is clicked
