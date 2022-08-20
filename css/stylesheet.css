@@ -10,7 +10,7 @@
     --white-almost: #f8f8f8;
     --teal-very-light-color: #b4d9d2;
     --teal-light-color: #8ac2b6;
-    --teal-team-strong: #20ac99;
+    --teal-team-strong: #158d7d;
     --teal-team-color1: #51a899;
     --teal-team-color: #8ac2b6;
     --teal-green-darker: #609a8e;
@@ -35,7 +35,7 @@
     --white-almost: #f8f8f8;
     --teal-very-light-color: #b4d9d2;
     --teal-light-color: #21968a;
-    --teal-team-strong: #076c5f;
+    --teal-team-strong: #0e8072;
     --teal-team-color1: #3ca494;
     --teal-team-color: #5dad9d;
     --teal-green-darker: #457a6f;
@@ -168,12 +168,9 @@ a {
     z-index: 10;
     background-color: black;
     font-family: var(--font-header);
-    /*color: #405c54;*/
     width: 100%;
-    /*z-index: 10;*/
     position: fixed;
     top: 0;
-    /*width: 100%;*/
 }
 
 .container {
@@ -327,6 +324,7 @@ a {
 }
 
 /*Using WEBP image types for better responsiveness and improve loading times*/
+/*Overlapping a gradient for a nice color effect on black & white pictures*/
 .hero-section.about {
     background-image: linear-gradient(180deg, var(--teal-team-color), var(--bluish-teal-gradient)), url('../assets/images/slider_01.webp');
 }
@@ -379,7 +377,7 @@ a {
 .sponsors-section {
     position: inherit;
     padding: 50px 30px;
-    border-bottom: 1px solid #e4ebf3;
+    border-bottom: 1px solid var(--white-almost);
 }
 
 .sponsors-row {
@@ -585,7 +583,7 @@ a {
     justify-content: center;
 }
 
-/*Ref https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator*/
+/*Ref https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator */
 .testimonial-card {
     display: block;
     max-width: 26%;
@@ -1151,7 +1149,7 @@ a {
         width: 100%;
     }
 
-    /*Reference from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp*/
+    /*Reference from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
     .menu-icon {
         margin-top: -20px;
         text-align: left;
@@ -1337,7 +1335,6 @@ a {
 
     .love-banner {
         width: 100%;
-        /*max-height: 300px;*/
         padding-top: 200px;
         padding-bottom: 170px;
         object-fit: fill;

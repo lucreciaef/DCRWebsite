@@ -77,7 +77,7 @@ function clickToReadMore(element) { //Passing current clicked button as element
 // Functionality for the accessibility menu on the left side of each page
 //---------------------------------------------------------------------------------
 
-// Using a bit of jQuery for learning and practicing, although this functionality does not require it
+// Using a bit of jQuery for learning and practicing, although this functionality does not "require" it
 // Ref & Help: https://www.w3schools.com/jquery/jquery_selectors.asp
 // Ref: https://api.jquery.com/slideToggle/
 
