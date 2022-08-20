@@ -9,7 +9,7 @@
     <meta name="keywords" content="roller derby, sport, austria, graz, dust city rollers">
     <link rel="stylesheet" href="css/stylesheet.css">
     <!--Font Awesome library to use icons, such as sandwich icon for responsive navbar-->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--jQuery used for the accessibility options tab on each page-->
     <script src="scripts/jquery.min.js" defer></script>
     <!--Defer keyword ensures that DOM is loaded completely before running JS script-->
@@ -50,19 +50,19 @@
 
     <!--ACCESSIBILITY TOOLS-->
     <aside class="accessibility-options">
-        <section class="accessibility-menu expand-accessibility">
+        <section class="accessibility-menu expand-accessibility" title="Accessibility Options">
             <!--Main tab that can be expanded when clicked-->
-            <a title="Accessibility Options" href="#"><i class="fa fa-wheelchair"></i></a>
+            <a aria-label="Accessibility Options" href="#"><i class="fa fa-wheelchair"></i></a>
         </section>
         <!--All hidden options that can be seen after clicking-->
         <section class="all-acc-options" style="display: none;">
             <!--Option to improve the contrast, since the website style has many pastel colors-->
-            <section id="contrast-option" class="acc-option">
-                <a title="Increase Contrast" href="#"><i class="fa fa-sliders"></i></a>
+            <section id="contrast-option" class="acc-option" title="Increase Contrast">
+                <a aria-label="Increase Contrast" href="#"><i class="fa fa-sliders"></i></a>
             </section>
             <!--Option to apply a more readable font (although not so stylish) as the default one is very narrow-->
-            <section id="font-option" class="acc-option">
-                <a title="Readable Font" href="#"><i class="fa fa-font"></i></a>
+            <section id="font-option" class="acc-option" title="Readable Font">
+                <a aria-label="Readable Font" href="#"><i class="fa fa-font"></i></a>
             </section>
         </section>
     </aside>
