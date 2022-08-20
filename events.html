@@ -29,7 +29,7 @@
     <!--HEADER SECTION-->
     <header class="nav-header" aria-label="navigation menu" role="banner" id="nav-header-id">
         <section class="container nav-bar-section" id="nav-bar-id">
-            <a href="index.html">
+            <a aria-label="home-link" href="index.html">
                 <img src="assets/images/dcr_schrift_white.png" loading="lazy" alt="Dust City Rollers" class="nav-bar-image"></a>
             <nav role="navigation" class="nav-bar-links" id="nav-menu-id">
                 <a href="index.html" aria-current="page" class="navigation-link">Home</a>
@@ -39,7 +39,7 @@
                 <a href="contact.html" class="navigation-link">Contact</a>
                 <a href="report.html" class="navigation-link">REPORT</a>
                 <!--Clicking on the menu triggers a swap in css classes, to create a responsive navbar. References in script.js-->
-                <a href="javascript:void(0);" class="menu-icon" onclick="clickOnMenuButton()">
+                <a aria-label="sandwich-menu-button" href="javascript:void(0);" class="menu-icon" onclick="clickOnMenuButton()">
                     <!--Sandwich button for navbar-->
                     <i class="fa fa-bars"></i>
                 </a>
@@ -58,19 +58,19 @@
 
     <!--ACCESSIBILITY TOOLS-->
     <aside class="accessibility-options">
-        <section class="accessibility-menu expand-accessibility" title="Accessibility Options">
+        <section class="accessibility-menu expand-accessibility">
             <!--Main tab that can be expanded when clicked-->
-            <a href="#"><i class="fa fa-wheelchair"></i></a>
+            <a title="Accessibility Options" href="#"><i class="fa fa-wheelchair"></i></a>
         </section>
         <!--All hidden options that can be seen after clicking-->
         <section class="all-acc-options" style="display: none;">
             <!--Option to improve the contrast, since the website style has many pastel colors-->
-            <section id="contrast-option" class="acc-option" title="Increase Contrast">
-                <a href="#"><i class="fa fa-sliders"></i></a>
+            <section id="contrast-option" class="acc-option">
+                <a title="Increase Contrast" href="#"><i class="fa fa-sliders"></i></a>
             </section>
             <!--Option to apply a more readable font (although not so stylish) as the default one is very narrow-->
-            <section id="font-option" class="acc-option" title="Readable Font">
-                <a href="#"><i class="fa fa-font"></i></a>
+            <section id="font-option" class="acc-option">
+                <a title="Readable Font" href="#"><i class="fa fa-font"></i></a>
             </section>
         </section>
     </aside>
